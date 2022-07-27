@@ -1,0 +1,43 @@
+// HEADER
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10%;
+    background-color: antiquewhite;
+    position: sticky;
+    flex-wrap: nowrap;
+
+    div{ 
+        a{
+        display: inline-block;
+        text-decoration: none;
+        
+        }
+        
+    }
+    nav{
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        
+        li{
+            width: fit-content;
+            display: flex;
+            margin: 3%;
+            a{
+                display: inline-block;
+                text-decoration: none;
+                text-align: center;
+            }
+            
+        }
+    }
+}
