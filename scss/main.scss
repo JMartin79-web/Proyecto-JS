@@ -1,5 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
-    background-color: antiquewhite;
-}
+// UTILIDADES
+@import "utilities/utilities.scss";
+
+// GENERAL
+@import "general/basico.scss";
+@import "general/header.scss";
+@import "general/footer.scss";
+
+// PAGINAS
+
+
+// RESPONSIVE
