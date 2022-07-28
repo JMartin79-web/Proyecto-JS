@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     
     <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <title>Home</title>
+    <title>Carrito</title>
 </head>
 
 
@@ -75,22 +75,25 @@
                 <tr> <!-- Producto -->
                     <td>  <!-- Delete -->
                         <button class="btn-delete">
-                            <span class="material-symbols-outlined">
-                            delete
-                            </span>
+                            <span class="material-symbols-outlined">delete</span>
                         </button>
                         
                     </td>
-                    <td>
+
+                    <td> <!-- Foto -->
                         <div class="img_provisoria"></div>
-                    </td> <!-- Foto -->
+                    </td>
+
                     <td>Producto</td>
-                    <td>Precio</td>
+
+                    <td>100</td>
+
                     <td><label for="cantidad"></label>
                         <input type="number" id="cantidad" name="cantidad"
                         min="1" max="10" value="1">
                     </td>
-                    <td>Subtotal</td>
+
+                    <td></td>
                 </tr>
             </tbody>
 
@@ -118,7 +121,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>Total</td>
+                    <td id="sumaTotal" value="100"></td>
                 </tr>
 
                 <tr> <!--Boton para pagar-->
@@ -138,5 +141,5 @@
 </main>
 
 </body>
-
+<script src="../js/carrito.js"></script>
 </html>
