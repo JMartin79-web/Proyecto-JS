@@ -10,6 +10,11 @@
 h1, h2, h3, h4 {
   font-weight: 700; }
 
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #fcfcfc; }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -37,3 +42,50 @@ header {
         display: inline-block;
         text-decoration: none;
         text-align: center; }
+
+.main__carrito {
+  margin: 0% 10%; }
+  .main__carrito section table {
+    margin: auto;
+    -webkit-border-vertical-spacing: 5px;
+    -webkit-border-horizontal-spacing: 0px; }
+    .main__carrito section table thead tr td {
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: 700;
+      width: 18%;
+      background-color: antiquewhite;
+      padding: 1% 0%; }
+      .main__carrito section table thead tr td:first-child {
+        width: 10%; }
+    .main__carrito section table tbody tr {
+      background-color: #fcfcfc; }
+      .main__carrito section table tbody tr td {
+        padding: 1%; }
+        .main__carrito section table tbody tr td:first-child {
+          text-align: center; }
+    .main__carrito section table tfoot tr td {
+      font-weight: 700; }
+
+.img_provisoria {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  min-height: 50px;
+  max-height: 200px;
+  background-color: beige; }
+
+.btn-delete {
+  border: none;
+  cursor: pointer;
+  background-color: transparent; }
+
+.btn-finalizar {
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 20%;
+  color: #fcfcfc;
+  background-color: black; }

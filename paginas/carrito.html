@@ -54,7 +54,88 @@
 
 </header>
 
+<main class="main__carrito">
+    <h1>Carrito</h1>
 
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <td></td> <!-- Delete -->
+                    <td></td> <!-- Foto -->
+                    <td>Producto</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Subtotal</td>
+                </tr>
+                
+            </thead>
+
+            <tbody>
+                <tr> <!-- Producto -->
+                    <td>  <!-- Delete -->
+                        <button class="btn-delete">
+                            <span class="material-symbols-outlined">
+                            delete
+                            </span>
+                        </button>
+                        
+                    </td>
+                    <td>
+                        <div class="img_provisoria"></div>
+                    </td> <!-- Foto -->
+                    <td>Producto</td>
+                    <td>Precio</td>
+                    <td><label for="cantidad"></label>
+                        <input type="number" id="cantidad" name="cantidad"
+                        min="1" max="10" value="1">
+                    </td>
+                    <td>Subtotal</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr> <!--Envio-->
+                    <td colspan="2">Envío</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>$500</td>
+                </tr>
+                
+                <tr> <!--Para aplicar cupones-->
+                    <td colspan="2">
+                        <input type="text" placeholder="Agregar cupón">
+                    </td>
+                    <td colspan="2"><button>aplicar cupon</button> </td>
+                    <td></td>
+                    <td>-cupón</td>
+                </tr>
+
+                <tr> <!--Total-->
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total</td>
+                </tr>
+
+                <tr> <!--Boton para pagar-->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"><button class="btn-finalizar">FINALIZAR COMPRA</button></td>
+                </tr>
+
+            </tfoot>
+            
+            
+
+        </table>
+    </section>
+</main>
 
 </body>
 
