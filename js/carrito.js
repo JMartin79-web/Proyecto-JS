@@ -1,5 +1,5 @@
 // ALGORITMO
-// TAREA: funci+on que cree un objeto basado en determinada información pautada por una clase y pedida mediante prompts. Además que no se pueda avanzar al siguente dato si no se valida el que está en curso de asignación.
+// TAREA: función que cree un objeto basado en determinada información pautada por una clase y pedida mediante prompts. Además que no se pueda avanzar al siguiente dato si no se valida el que está en curso de asignación.
 function agregarProducto(){
 
     // Se define una clase para estipular los datos necesarios del producto
