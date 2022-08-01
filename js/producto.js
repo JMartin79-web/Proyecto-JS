@@ -5,11 +5,12 @@
 
 // Se define una clase para estipular los datos necesarios del producto
 class Producto {
-    constructor(nombre,talle,cantidad,precio){
+    constructor(nombre,talle,cantidad,precio, preciototal){
         this.nombre = nombre
         this.talle = talle
         this.cantidad = cantidad
-        this.precio = precio        
+        this.precio = precio
+        this.preciototal = preciototal        
     }
 }
 
@@ -104,4 +105,35 @@ class Producto {
 alert("Estás por comprar " + producto1Nombre); // Se avisa que estás por comprar
 const producto1 = new Producto(producto1Nombre, pedirTalle(), pedirCantidad(), precioProducto1); // Se crea el objeto pidiendo talle y cantidad
 alert("el precio por unidad del " + producto1Nombre + " es de: " + precioProducto1) // Se avisa el precio
+
+// Se agrga el precio a pagar, es decir precio * cantidad
+producto1 ["preciototal"] = {} 
+
+// DESAFÍO INCORPORAR ARRAYS
+// Se creará un array donde se guarden los objetos que cree el usuario en relacion a su pedido
+
+const arrayPedido = []
+arrayPedido.push(producto1)
+// Recorremos el array
+for(let i=0; i<arrayPedido.length; i++){
+    console.log(arrayPedido[i])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
