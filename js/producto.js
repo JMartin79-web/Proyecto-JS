@@ -110,7 +110,7 @@ class Producto {
 alert("Estás por comprar " + producto1Nombre); // Se avisa que estás por comprar
 const producto1 = new Producto(producto1Nombre, pedirTalle(), pedirCantidad(), precioProducto1); // Se crea el objeto pidiendo talle y cantidad
 producto1.preciototal = (multiplicar(producto1.cantidad, precioProducto1)); // Se multiplica la cantidad del producto por el valor de este
-alert("El precio a pagar de " + producto1Nombre + " es de: " + preciototal) // Se avisa el precio
+alert("El precio a pagar de " + producto1Nombre + " es de: " + producto1.preciototal) // Se avisa el precio
 
 // Se creará un array donde se guarden los objetos que cree el usuario en relacion a su pedido
 const arrayPedido = []
