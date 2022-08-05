@@ -100,13 +100,16 @@ class Producto {
 
     // Creamos una funcion que calcule el precio total (cantidad*precio)
     
-
+    let multiplicar = (a, b) => {
+        c = a*b
+        return c
+    }
     
 
 //AHORA SE CREA EL NUEVO OBJETO SIGUIENDO LA CLASE "Producto"
 
 alert("Estás por comprar " + producto1Nombre); // Se avisa que estás por comprar
-const producto1 = new Producto(producto1Nombre, pedirTalle(), pedirCantidad(), precioProducto1, ); // Se crea el objeto pidiendo talle y cantidad
+const producto1 = new Producto(producto1Nombre, pedirTalle(), pedirCantidad(), precioProducto1, multiplicar(pedirCantidad.value, precioProducto1)); // Se crea el objeto pidiendo talle y cantidad
 alert("el precio por unidad del " + producto1Nombre + " es de: " + precioProducto1) // Se avisa el precio
 
 
