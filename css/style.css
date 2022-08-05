@@ -49,16 +49,16 @@ header {
 
 .main__img {
   width: 100%; }
-  .main__img .main__img__img {
+  .main__img .main__img__section {
     width: 100%;
     max-height: 700px;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .main__img .main__img__img img {
+    .main__img .main__img__section img {
       z-index: -1;
       width: fit-content; }
-    .main__img .main__img__img div {
+    .main__img .main__img__section div {
       z-index: 2;
       position: absolute;
       margin: auto 30%;
@@ -66,9 +66,9 @@ header {
       background-color: rgba(255, 255, 255, 0.589);
       display: flex;
       flex-direction: column; }
-      .main__img .main__img__img div h3 {
+      .main__img .main__img__section div h3 {
         text-align: center; }
-      .main__img .main__img__img div button {
+      .main__img .main__img__section div button {
         margin: auto; }
 
 .main__contenido {
@@ -110,3 +110,14 @@ header {
     "cupon  cupon btncupon nada2 nada2 nada2 cuponprecio"
     "nada3 nada3 nada3 nada3 fin fin fin"
 */
+.main__contacto {
+  width: 100%;
+  display: flex; }
+  .main__contacto section {
+    width: 50%; }
+  .main__contacto .main__contacto__sec2 {
+    background-image: url(../../assets/img/img_contacto/messi_llamando.jpg);
+    background-position: center;
+    background-size: cover; }
+  .main__contacto .main__contacto__sec1 {
+    padding: 5% 2%; }

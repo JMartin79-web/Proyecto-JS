@@ -99,25 +99,23 @@ class Producto {
     console.log("El precio es de:" + precioProducto1)
 
     // Creamos una funcion que calcule el precio total (cantidad*precio)
-    
     let multiplicar = (a, b) => {
-        c = a*b
+        c = a * b
         return c
     }
     
 
-//AHORA SE CREA EL NUEVO OBJETO SIGUIENDO LA CLASE "Producto"
+//AHORA SE CREA EL NUEVO OBJETO(producto1) SIGUIENDO LA CLASE "Producto"
 
 alert("Estás por comprar " + producto1Nombre); // Se avisa que estás por comprar
-const producto1 = new Producto(producto1Nombre, pedirTalle(), pedirCantidad(), precioProducto1, multiplicar(pedirCantidad(cantidad.value), precioProducto1)); // Se crea el objeto pidiendo talle y cantidad
-alert("el precio por unidad del " + producto1Nombre + " es de: " + precioProducto1) // Se avisa el precio
+const producto1 = new Producto(producto1Nombre, pedirTalle(), pedirCantidad(), precioProducto1); // Se crea el objeto pidiendo talle y cantidad
+producto1.preciototal = (multiplicar(producto1.cantidad, precioProducto1)); // Se multiplica la cantidad del producto por el valor de este
+alert("El precio a pagar de " + producto1Nombre + " es de: " + preciototal) // Se avisa el precio
 
-
-// DESAFÍO INCORPORAR ARRAYS
 // Se creará un array donde se guarden los objetos que cree el usuario en relacion a su pedido
-
 const arrayPedido = []
 arrayPedido.push(producto1)
+
 // Recorremos el array
 for(let i=0; i<arrayPedido.length; i++){
     console.log(arrayPedido[i])
