@@ -54,44 +54,40 @@
 
 </header>
 
-<main>
+<main class="main__product">
 
     <section class="img__poduct">
-        <img src="#" alt="imagen del producto">
+        <img src="../../assets/img/img_contacto/messi_llamando.jpg" alt="imagen del producto">
     </section>
 
     <section class="info__product">
         
-        <div>
+        <div class="info__product__titulo"> <!-- TITULO Y PRECIO -->
             <h2 id="nombre">NOMBRE DEL PRODUCTO</h2>
             <p id="precio">100</p>
         </div>
-        
-        <div>
-            <p>Descripcion breve del producto.</p>
-
-            <div>
-                <div>
-                    <p>seleccionar talle</p>
-                    <select name="talle" id="talle">
-                        <option value="xs">XS</option>
-                        <option value="s">S</option>
-                        <option value="m">M</option>
-                        <option value="l">L</option>
-                        <option value="xl">XL</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number" id="cantidad" name="cantidad"
-                    min="1" max="10" value="1">
-
-                </div>
-
-            </div>
+        <br>
+        <div class="info__product__descripcion"> <!-- DESCRIPCION -->
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti vitae aut veniam possimus, molestiae quod, animi necessitatibus a ab quasi quaerat mollitia quisquam officia consequatur dolorem consectetur unde ipsa molestias.</p>
         </div>
+        <br>
+        <div class="info__product__cantidad"> <!-- CANTIDAD -->
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" name="cantidad"
+            min="1" max="10" value="1">
 
+        </div>
+        <div class="info__product__talle"> <!-- TALLE -->
+            <label for="talle">Seleccionar talle</label>
+            <select name="talle" id="talle">
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+        <br>
         <button>
             AGREGAR AL CARRITO
         </button>
@@ -101,10 +97,13 @@
 
 
 <!-- SEPARA Y DA INFO EXTRA -->
-<section>
-    <a href="#">Formas de pago</a>
-    <a href="#">Guía de talles</a>
-    <a href="#">Envíos, cambios y devoluciones</a>
+<section class="product__separar">
+    <div> <!-- otros -->
+        <a href="#">Formas de pago</a>
+        <a href="#">Envíos, cambios y devoluciones</a>
+        <a href="#">Guía de talles</a>
+    </div>
+    
     <a href="#"><span class="material-symbols-outlined">share</span></a>
 </section>
 
@@ -124,5 +123,6 @@
 
 
 </body>
-<script src="../../js/producto.js"></script>
+
+<!-- <script src="../../js/producto.js"></script> -->
 </html>

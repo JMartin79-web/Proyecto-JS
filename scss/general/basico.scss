@@ -24,6 +24,7 @@ a{text-decoration: none;}
 button{
     cursor: pointer;
     border: none;
-    background-color: #fcfcfc;
-    padding: 5px;
+    background-color: $color-v;
+    padding: 15px;
+    font-weight: 600;
 }

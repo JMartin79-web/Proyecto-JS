@@ -1,0 +1,22 @@
+// VAR COLORES
+
+// COLORS
+$color-v: #bce7d9; // verde agua
+$color-vf:#1ed974; // verde fuerte
+$color-b: #f8f8f8; // blanco
+$color-g: #e1e8ec; // gris
+$color-a: #4c5175; // azul oscuro
+
+
+@mixin d-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};
+
+@mixin d-flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+};

@@ -1,0 +1,38 @@
+// ESTILOS QUE SE VAN A USAR EN TODAS LAS PÁGINAS DE DETALLES DE PRODUCTO
+
+
+.main__product{
+    display: flex;
+    align-items: center;
+    max-height: 100vh;
+    .img__poduct{
+        max-width: 50%;
+        @include d-flex-center;
+        padding: 2%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .info__product{
+        width: 50%;
+        padding: 2%;
+        
+        
+        .info__product__titulo{
+            h2{font-size: xx-large;}
+        }
+    }
+}
+
+.product__separar{
+    margin:5%;
+    @include d-flex-column-center;
+    div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        a{margin: 0 1%; text-align: center;}
+        margin-bottom: 10px;}
+}
+

@@ -16,8 +16,9 @@ a {
 button {
   cursor: pointer;
   border: none;
-  background-color: #fcfcfc;
-  padding: 5px; }
+  background-color: #bce7d9;
+  padding: 15px;
+  font-weight: 600; }
 
 header {
   display: flex;
@@ -121,3 +122,36 @@ header {
     background-size: cover; }
   .main__contacto .main__contacto__sec1 {
     padding: 5% 2%; }
+
+.main__product {
+  display: flex;
+  align-items: center;
+  max-height: 100vh; }
+  .main__product .img__poduct {
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%; }
+    .main__product .img__poduct img {
+      width: 100%; }
+  .main__product .info__product {
+    width: 50%;
+    padding: 2%; }
+    .main__product .info__product .info__product__titulo h2 {
+      font-size: xx-large; }
+
+.product__separar {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .product__separar div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .product__separar div a {
+      margin: 0 1%;
+      text-align: center; }
