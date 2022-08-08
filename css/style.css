@@ -144,11 +144,11 @@ header {
       display: inline-flex; }
     .shop .shop__filtro .shop__filtro__filtrar .shop__filtro__filtrar__rango {
       width: 65%; }
-    .shop .shop__filtro .shop__filtro_clubes {
+    .shop .shop__filtro .shop__filtro__club {
       display: flex;
       flex-direction: column;
       width: 50%; }
-      .shop .shop__filtro .shop__filtro_clubes button {
+      .shop .shop__filtro .shop__filtro__club button {
         margin: 5px; }
   .shop .shop__cards {
     width: 75%;
@@ -179,7 +179,7 @@ header {
         margin-bottom: 25px; }
 
 .filtro__sacar {
-  display: none; }
+  display: none !important; }
 
 .main__product {
   display: flex;

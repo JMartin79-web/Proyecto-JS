@@ -19,7 +19,7 @@
             h4{display: inline-flex;}
             .shop__filtro__filtrar__rango{width: 65%;}
         }
-        .shop__filtro_clubes{
+        .shop__filtro__club{
             display: flex;
             flex-direction: column;
             width: 50%;
@@ -74,5 +74,5 @@
 
 // PARA JS. CLASE QUE LE DA LA PROPIEDAD NECESARIA PARA QUE EN LA SHOP NO SE MUESTRE LO QUE NO COINCIDE
 .filtro__sacar{
-    display: none;
+   display: none!important;   
 }
