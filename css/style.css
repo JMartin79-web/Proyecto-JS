@@ -123,6 +123,64 @@ header {
   .main__contacto .main__contacto__sec1 {
     padding: 5% 2%; }
 
+.shop {
+  width: 100%;
+  display: flex; }
+  .shop .shop__filtro {
+    width: 25%;
+    height: 80vh;
+    background-color: #f8f8f8;
+    margin: 2%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    .shop .shop__filtro .shop__filtro__buscar {
+      display: inline-flex; }
+      .shop .shop__filtro .shop__filtro__buscar input {
+        width: 65%;
+        margin-right: 10px; }
+    .shop .shop__filtro .shop__filtro__filtrar h4 {
+      display: inline-flex; }
+    .shop .shop__filtro .shop__filtro__filtrar .shop__filtro__filtrar__rango {
+      width: 65%; }
+    .shop .shop__filtro .shop__filtro_clubes {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      .shop .shop__filtro .shop__filtro_clubes button {
+        margin: 5px; }
+  .shop .shop__cards {
+    width: 75%;
+    height: 80vh;
+    margin: 2%;
+    background-color: #f8f8f8;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1%; }
+    .shop .shop__cards .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .shop .shop__cards .card .card__img {
+        width: 80%;
+        padding-top: 25px; }
+        .shop .shop__cards .card .card__img img {
+          width: 100%;
+          max-height: 500px;
+          object-fit: cover;
+          overflow: hidden; }
+      .shop .shop__cards .card .card__txt {
+        width: 80%;
+        max-height: 80px;
+        margin-bottom: 25px; }
+
+.filtro__sacar {
+  display: none; }
+
 .main__product {
   display: flex;
   align-items: center;
@@ -155,36 +213,3 @@ header {
     .product__separar div a {
       margin: 0 1%;
       text-align: center; }
-
-.shop {
-  width: 100%;
-  display: flex; }
-  .shop .shop__filtro {
-    width: 25%;
-    height: 100vh;
-    background-color: #f8f8f8;
-    margin: 2%;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; }
-    .shop .shop__filtro .shop__filtro__buscar {
-      display: inline-flex; }
-      .shop .shop__filtro .shop__filtro__buscar input {
-        width: 65%;
-        margin-right: 10px; }
-    .shop .shop__filtro .shop__filtro__filtrar h4 {
-      display: inline-flex; }
-    .shop .shop__filtro .shop__filtro__filtrar .shop__filtro__filtrar__rango {
-      width: 65%; }
-  .shop .shop__cards {
-    background-color: #f8f8f8;
-    width: 75%;
-    margin: 2%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto; }
-    .shop .shop__cards .card .card__img__placehodler {
-      width: 250px;
-      height: 250px;
-      background-color: #4c5175; }

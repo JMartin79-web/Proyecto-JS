@@ -9,8 +9,13 @@
 // PAGINAS
 @import "paginas/home.scss";
 @import "paginas/carrito.scss";
-@import "paginas/contacto.scss";
-@import "paginas/producto.scss";
+@import "paginas/nosotros.scss";
 @import "paginas/shop.scss";
+
+// PAGINA SECUNDARIA
+@import "paginas/producto.scss";
+
+// ANIMACIONES
+@import "./utilities/animaciones.scss";
 
 // RESPONSIVE
