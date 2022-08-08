@@ -155,3 +155,25 @@ header {
     .product__separar div a {
       margin: 0 1%;
       text-align: center; }
+
+.shop {
+  width: 100%; }
+  .shop .shop__filtro {
+    width: 25%;
+    height: 100vh;
+    position: absolute;
+    background-color: #f8f8f8;
+    margin: 2%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    .shop .shop__filtro .shop__filtro__buscar {
+      display: inline-flex; }
+      .shop .shop__filtro .shop__filtro__buscar input {
+        width: 65%;
+        margin-right: 10px; }
+    .shop .shop__filtro .shop__filtro__filtrar h4 {
+      display: inline-flex; }
+    .shop .shop__filtro .shop__filtro__filtrar .shop__filtro__filtrar__rango {
+      width: 65%; }

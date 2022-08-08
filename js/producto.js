@@ -18,6 +18,7 @@ class Producto {
 
     // Creamos una función que nos permita crear los nombres de los diferentes productos
     const pedirNombre = function(nombrePedido){
+        nombrePedido = document.getElementById("nombre")
         return nombrePedido
     }
 

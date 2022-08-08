@@ -1,0 +1,24 @@
+.shop{
+    width: 100%;
+    .shop__filtro{
+        width: 25%;
+        height: 100vh;
+        position: absolute;
+        background-color: $color-b;
+        margin: 2%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    
+        .shop__filtro__buscar{
+            display: inline-flex;
+            input{width: 65%; margin-right: 10px;}
+        }
+        .shop__filtro__filtrar{
+            h4{display: inline-flex;}
+            .shop__filtro__filtrar__rango{width: 65%;}
+        }
+
+    }
+}
