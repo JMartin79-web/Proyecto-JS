@@ -157,11 +157,11 @@ header {
       text-align: center; }
 
 .shop {
-  width: 100%; }
+  width: 100%;
+  display: flex; }
   .shop .shop__filtro {
     width: 25%;
     height: 100vh;
-    position: absolute;
     background-color: #f8f8f8;
     margin: 2%;
     padding: 2%;
@@ -177,3 +177,14 @@ header {
       display: inline-flex; }
     .shop .shop__filtro .shop__filtro__filtrar .shop__filtro__filtrar__rango {
       width: 65%; }
+  .shop .shop__cards {
+    background-color: #f8f8f8;
+    width: 75%;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; }
+    .shop .shop__cards .card .card__img__placehodler {
+      width: 250px;
+      height: 250px;
+      background-color: #4c5175; }
