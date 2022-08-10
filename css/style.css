@@ -20,6 +20,11 @@ button {
   padding: 15px;
   font-weight: 600; }
 
+.btn-clicked {
+  background-color: #1ed974;
+  color: #f8f8f8;
+  font-weight: 700; }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -170,13 +175,15 @@ header {
         padding-top: 25px; }
         .shop .shop__cards .card .card__img img {
           width: 100%;
-          max-height: 500px;
+          height: 500px;
           object-fit: cover;
           overflow: hidden; }
       .shop .shop__cards .card .card__txt {
         width: 80%;
         max-height: 80px;
         margin-bottom: 25px; }
+        .shop .shop__cards .card .card__txt .card__txt__club, .shop .shop__cards .card .card__txt .card__txt__stock {
+          font-size: 0px; }
 
 .filtro__sacar {
   display: none !important; }

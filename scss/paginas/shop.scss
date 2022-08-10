@@ -53,7 +53,7 @@
                 padding-top: 25px;
                 img{
                     width: 100%;
-                    max-height: 500px;
+                    height: 500px;
                     object-fit: cover;
                     overflow: hidden;
                 }
@@ -63,6 +63,9 @@
                 width: 80%;
                 max-height: 80px;
                 margin-bottom: 25px;
+                .card__txt__club, .card__txt__stock{
+                    font-size: 0px;
+                }
             }
         }
     }

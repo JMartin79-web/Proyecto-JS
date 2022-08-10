@@ -19,6 +19,8 @@ h1,h2,h3,h4{
     font-weight: 700;
 }
 a{text-decoration: none;}
+
+
 // BOTONES
 
 button{
@@ -27,4 +29,9 @@ button{
     background-color: $color-v;
     padding: 15px;
     font-weight: 600;
+}
+.btn-clicked{
+    background-color: $color-vf;
+    color: $color-b;
+    font-weight: 700;
 }
