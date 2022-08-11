@@ -54,17 +54,22 @@
             <input type="search" id="buscador" placeholder="Buscar">
             <span class="material-symbols-outlined">search</span>
         </div>
-
+        
         <br><br>
 
         <div class="shop__filtro__filtrar">
             <h4>Filtrar
                 <span class="material-symbols-outlined">filter_alt</span>
             </h4>
-            <br><br>
+
+        </div>
+
+        <br><br>
+
+        <div>  
             <p>Rango de precio</p>
             <input type="range" min="" max="" class="shop__filtro__filtrar__rango">
-            <br><br>
+            
         </div>
 
         <br><br>
@@ -74,74 +79,37 @@
             <button class="filtro_premierLeague">Premier League</button>
             <button class="filtro_argentina">Fútbol Argentino</button>
             <button class="filtro_ligue1"> Ligue 1</button>
-            <button class="filtro__laLiga">La Liga</button>
-            <button class="filtro__bundesliga">BundesLiga</button>
-            <button class="filtro__internacional">Internacional</button>
+            <button class="filtro_laLiga">La Liga</button>
+            <button class="filtro_bundesliga">BundesLiga</button>
+            <button class="filtro_internacional">Internacional</button>
         </div>
 
     </section>
 
 
-
-
     <!-- PARTE DE LA GALERIA DE PRODUCTOS -->
-    <section class="shop__cards">
+    <section class="shop__cards" id="items">
 
-        <div class="card">
-
-            <div class="card__img">
-                <img class="card__img__img" src="../assets/img/img_shop/milan2021.webp" alt=""> 
-            </div>
-                
-            <div class="card__txt">
-                <h3 class="card__txt__h3">Camiseta AC Milan Titular 2021/22</h3>
-                <p class="card__txt__p">100</p>
-                <p class="card__txt__club">Serie A</p>
-                <p class="card__txt__stock">30</p>
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <div class="card__img">
-                <img class="card__img__img" src="../assets/img/img_shop/barca2022.webp" alt=""> 
-            </div>
-                
-            <div class="card__txt">
-                <h3 class="card__txt__h3">Camiseta Barcelona Titular 2021/22</h3>
-                <p class="card__txt__p">100</p>
-                <p class="card__txt__club">La Liga</p>
-                <p class="card__txt__stock">30</p>
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <div class="card__img">
-                <img class="card__img__img" src="../assets/img/img_shop/boca2022.webp" alt=""> 
-            </div>
-                
-            <div class="card__txt">
-                <h3 class="card__txt__h3">Camiseta Boca Titular 2021/22</h3>
-                <p class="card__txt__p">100</p>
-                <p class="card__txt__club">argenitna</p>
-                <p class="card__txt__stock">30</p>
-            </div>
-
-        </div>
-
-
+       
     </section>
 
 </main>
 
+<template id="template__card">
 
+    <div class="card">
+        <div class="card__img">
+            <img class="card__img__img" src="" alt=""> 
+        </div>
+            
+        <div class="card__txt">
+            <h3 class="card__txt__h3 serieA">Camiseta AC Milan Titular 2021/22</h3>
+            <p class="card__txt__p">100</p>
+            <button class="card__txt__btn"> Ver más</button>
+        </div>
+    </div>
 
-
-
-
+</template>
 
 </body>
 
