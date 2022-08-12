@@ -5,7 +5,7 @@
     "foto": "../assets/img/img_shop/milan2021.webp",
     "nombre": "Camiseta AC Milan Titular 2021/22",
     "precio": 100,
-    "liga": "serie A",
+    "liga": "Serie A",
     "stock": 30
     },
     {
@@ -21,7 +21,7 @@
     "foto": "../assets/img/img_shop/boca2022.webp",
     "nombre": "Camiseta Boca Titular 2021/22",
     "precio": 300,
-    "liga": "argentina",
+    "liga": "Argentina",
     "stock": 30
     }
 ]

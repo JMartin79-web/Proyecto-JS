@@ -63,12 +63,18 @@
                 width: 80%;
                 height: auto;
                 margin-bottom: 25px;
+                .card__txt__div{
+                    .txt__liga{ color: $color-a;}
+                }
                 .card__txt__btn{
                     margin: auto 20%;
                     width: 60%;
                     background-color: $color-a;
                     color: $color-b;
                     padding: 5px 10px;
+                }
+                .card__txt__stock{
+                    font-size: 0px;
                 }
             }
         }

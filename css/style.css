@@ -182,12 +182,16 @@ header {
         width: 80%;
         height: auto;
         margin-bottom: 25px; }
+        .shop .shop__cards .card .card__txt .card__txt__div .txt__liga {
+          color: #4c5175; }
         .shop .shop__cards .card .card__txt .card__txt__btn {
           margin: auto 20%;
           width: 60%;
           background-color: #4c5175;
           color: #f8f8f8;
           padding: 5px 10px; }
+        .shop .shop__cards .card .card__txt .card__txt__stock {
+          font-size: 0px; }
 
 .filtro__sacar {
   display: none !important; }

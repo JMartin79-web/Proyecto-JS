@@ -50,11 +50,51 @@
 
 </header>
 
-<main class="main__product">
+<main class="main__product" id="main__product">
 
+
+</main>
+
+
+<!-- SEPARA Y DA INFO EXTRA -->
+<section class="product__separar">
+    <div> <!-- otros -->
+        <a href="#">Formas de pago</a>
+        <a href="#">Envíos, cambios y devoluciones</a>
+        <a href="#">Guía de talles</a>
+    </div>
+    
+    <a href="#"><span class="material-symbols-outlined">share</span></a>
+</section>
+
+<!-- TERMINA LA PARTE DEL PRODUCTO SELECCIONADO, AHORA RECOMIENDA OTROS RELACIONADOS -->
+<main>
+    <div>
+        <h3>Ver relacionados</h3>
+    </div>
+
+    <div>
+        <div><img src="#" alt="destacado1"></div>
+    </div>
+
+</main>
+
+
+
+
+
+
+
+
+<!-- ACA ESTÁN LOS TEMPLATES PARA JS -->
+<template> <!-- TEMPLATE DE LA SECTION QUE CONTIENE LA IMAGEN -->
     <section class="img__poduct">
         <img src="../../assets/img/img_contacto/messi_llamando.jpg" alt="imagen del producto">
     </section>
+</template>
+
+
+<template> <!-- TEMPLATE DE LA SECTION QUE CONTIENE EL FORMULARIO Y DETALLES DEL PRODUCTO -->
 
     <section class="info__product">
         
@@ -88,36 +128,7 @@
             AGREGAR AL CARRITO
         </button>
     </section>
-
-</main>
-
-
-<!-- SEPARA Y DA INFO EXTRA -->
-<section class="product__separar">
-    <div> <!-- otros -->
-        <a href="#">Formas de pago</a>
-        <a href="#">Envíos, cambios y devoluciones</a>
-        <a href="#">Guía de talles</a>
-    </div>
-    
-    <a href="#"><span class="material-symbols-outlined">share</span></a>
-</section>
-
-<!-- TERMINA LA PARTE DEL PRODUCTO SELECCIONADO, AHORA RECOMIENDA OTROS RELACIONADOS -->
-<main>
-    <div>
-        <h3>Ver relacionados</h3>
-    </div>
-
-    <div>
-        <div><img src="#" alt="destacado1"></div>
-    </div>
-
-</main>
-
-
-
-
+</template>
 </body>
 
 <script src="../../js/producto.js"></script>
