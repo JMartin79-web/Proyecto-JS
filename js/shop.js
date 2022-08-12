@@ -22,7 +22,15 @@ document.addEventListener("keyup", busca =>{
 
 
 
+
+
+
 // CREAR FUNCIONALIDAD DE CARDS DINÁMICAS CONSUMIENDO UNA BASE DE DATOS
+
+// Primero que nada definimos el array donde se va a guardar el resultado de la acción del usuario( Es decir, cuando complete la acción final del boton ver mas)
+const carrito = []
+
+
 // Seleccionamos el section items, donde van a ir las tarjetas, y lo guardamos en una variable
 const items = document.getElementById("items")
 
@@ -60,7 +68,7 @@ const fetchData = async () => {
 // mostramos la informacion
 
 const printCards = (data) => {
-    
+   
     data.forEach(producto => {
         // Modificamos el elemento html
         templateCard.querySelector(".card__img__img").setAttribute("src", producto.foto)
@@ -82,8 +90,6 @@ const addCarrito = elementoClickeado => {
     if(elementoClickeado.target.classList.contains("card__txt__btn")){
         // Si hago click en el botón, agarra el contenido del elemento padre de su elemento padre. Porque la card es el elemento padre de la parte del texto del elemento btn. Es decir el "abuelo" del boton clickeado. De esta manera selecciona tanto la imagen como el texto de la card(toda la card)
         setCarrito(elementoClickeado.target.parentElement.parentElement)
-
-        redirect()
   
     }
 
@@ -108,12 +114,153 @@ const setCarrito = (objeto) => {
         stock: objeto.querySelector(".card__txt__stock").innerText,      
 
     }
-    console.log(productoParaCarrito)
+    // Lo pusheo como array para despues clonarlo
+    carrito.push(productoParaCarrito)
+    console.log(carrito)
+
 
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // AHORA SE DEBE DE REDIRECCIONAR A LA PAGINA PRODUCTO LLEVANDO LOS DATOS DE setCarrito
-function redirect () {window.location.href="http://127.0.0.1:5500/paginas/productos/producto.html"}
-console.log(window.location.href)
+
+
+
+
+
+
+
+
+
+
+// FILTRAR LOS ELEMENTOS
+
+// creamos const para guardar el lugar del div donde va a ir el boton
+const divEliminar = document.getElementById("eliminarFiltro")
+
+// funcion que crea boton de eliminar filtro
+function crearBtnEliminador(){
+    const btnEliminar = document.createElement("button")
+    btnEliminar.textContent = ("Limpiar filtro")
+    btnEliminar.classList.add("eliminarFiltro")
+    divEliminar.classList.add("eliminarFiltro-creado")
+    divEliminar.appendChild(btnEliminar)
+}
+
+
+document.addEventListener("click", (filtrarLiga) => {
+    // Si el boton apretado coincide con la clase
+    // SERIE A
+    if (filtrarLiga.target.matches(".filtro_serieA")) {
+        // Selecciona t
+        document.querySelectorAll(".card").forEach(cardProducto =>{
+            // card producto verifica si en cada card contiene la liga que coincida con lo ingresado
+            cardProducto.textContent.toLowerCase().includes("serie a")
+            // si coincide, le remueve la clase que lo esconde
+            ?cardProducto.classList.remove("filtro__sacar")
+            // si no coincide le agrega la clase que lo esconde
+            :cardProducto.classList.add("filtro__sacar") 
+        })
+    }
+    
+    // Si el boton apretado coincide con la clase
+    // PREMIERE LEAGUE
+    if (filtrarLiga.target.matches(".filtro_premierLeague")) {
+        // Selecciona t
+        document.querySelectorAll(".card").forEach(cardProducto =>{
+            // card producto verifica si en cada card contiene la liga que coincida con lo ingresado
+            cardProducto.textContent.toLowerCase().includes("premier league")
+            // si coincide, le remueve la clase que lo esconde
+            ?cardProducto.classList.remove("filtro__sacar")
+            // si no coincide le agrega la clase que lo esconde
+            :cardProducto.classList.add("filtro__sacar") 
+        })
+    }
+
+    // Si el boton apretado coincide con la clase
+    // ARGENTINA
+    if (filtrarLiga.target.matches(".filtro_argentina")) {
+        // Selecciona t
+        document.querySelectorAll(".card").forEach(cardProducto =>{
+            // card producto verifica si en cada card contiene la liga que coincida con lo ingresado
+            cardProducto.textContent.toLowerCase().includes("argentina")
+            // si coincide, le remueve la clase que lo esconde
+            ?cardProducto.classList.remove("filtro__sacar")
+            // si no coincide le agrega la clase que lo esconde
+            :cardProducto.classList.add("filtro__sacar") 
+        })
+    }
+    
+    // Si el boton apretado coincide con la clase
+    // LIGUE 1
+    if (filtrarLiga.target.matches(".filtro_ligue1")) {
+        // Selecciona t
+        document.querySelectorAll(".card").forEach(cardProducto =>{
+            // card producto verifica si en cada card contiene la liga que coincida con lo ingresado
+            cardProducto.textContent.toLowerCase().includes("ligue 1")
+            // si coincide, le remueve la clase que lo esconde
+            ?cardProducto.classList.remove("filtro__sacar")
+            // si no coincide le agrega la clase que lo esconde
+            :cardProducto.classList.add("filtro__sacar") 
+        })
+    }
+
+    // Si el boton apretado coincide con la clase
+    // LA LIGA
+    if (filtrarLiga.target.matches(".filtro_laLiga")) {
+        // Selecciona t
+        document.querySelectorAll(".card").forEach(cardProducto =>{
+            // card producto verifica si en cada card contiene la liga que coincida con lo ingresado
+            cardProducto.textContent.toLowerCase().includes("la liga")
+            // si coincide, le remueve la clase que lo esconde
+            ?cardProducto.classList.remove("filtro__sacar")
+            // si no coincide le agrega la clase que lo esconde
+            :cardProducto.classList.add("filtro__sacar") 
+        })
+    }
+
+    // Si el boton apretado coincide con la clase
+    // BUNDESLIGA
+    if (filtrarLiga.target.matches(".filtro_bundesliga")) {
+        // Selecciona t
+        document.querySelectorAll(".card").forEach(cardProducto =>{
+            // card producto verifica si en cada card contiene la liga que coincida con lo ingresado
+            cardProducto.textContent.toLowerCase().includes("bundesliga")
+            // si coincide, le remueve la clase que lo esconde
+            ?cardProducto.classList.remove("filtro__sacar")
+            // si no coincide le agrega la clase que lo esconde
+            :cardProducto.classList.add("filtro__sacar") 
+        })
+    }
+
+    // Si el boton apretado coincide con la clase
+    // INTERNACIONAL
+    if (filtrarLiga.target.matches(".filtro_internacional")) {
+        // Selecciona t
+        document.querySelectorAll(".card").forEach(cardProducto =>{
+            // card producto verifica si en cada card contiene la liga que coincida con lo ingresado
+            cardProducto.textContent.toLowerCase().includes("internacional")
+            // si coincide, le remueve la clase que lo esconde
+            ?cardProducto.classList.remove("filtro__sacar")
+            // si no coincide le agrega la clase que lo esconde
+            :cardProducto.classList.add("filtro__sacar") 
+        })
+    }
+
+
+    // Crea un botón que se va a usar para remover el filtro
+    // Si el boton de eliminar ya existe, no crear uno nuevo
+    if(divEliminar.classList.contains("")){crearBtnEliminador()}
+        else{if(divEliminar.classList.contains("eliminarFiltro-creado")){console.log("ya existe el boton")}
+             else{crearBtnEliminador()}}
+        
+} )
+
+// evento que escuche cuando se pulsa el boton de eliminar filtro
+document.addEventListener("click", (eliminarFiltros) => {
+    // Si existe el filtro refrescar la página para eliminarlo
+    if(eliminarFiltros.target.matches(".eliminarFiltro")){location. reload()}
+})
+
+

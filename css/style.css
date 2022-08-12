@@ -154,7 +154,8 @@ header {
       flex-direction: column;
       width: 50%; }
       .shop .shop__filtro .shop__filtro__club button {
-        margin: 5px; }
+        margin: 5px;
+        padding: 5px; }
   .shop .shop__cards {
     width: 75%;
     height: 80vh;

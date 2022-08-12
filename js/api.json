@@ -23,5 +23,45 @@
     "precio": 300,
     "liga": "Argentina",
     "stock": 30
-    }
+    },
+    {
+    "id": "4", 
+    "foto": "../assets/img/img_shop/psg2022.webp",
+    "nombre": "Camiseta Jordan PSG Stadium 4 2021/22",
+    "precio": 200,
+    "liga": "Ligue 1",
+    "stock": 30
+    },
+    {
+    "id": "5", 
+    "foto": "../assets/img/img_shop/bayern.webp",
+    "nombre": "Camiseta Bayern Munich",
+    "precio": 200,
+    "liga": "BundesLiga",
+    "stock": 30
+    },
+    {
+    "id": "6", 
+    "foto": "../assets/img/img_shop/francia2020.webp",
+    "nombre": "Camiseta Francia Stadium Home 2020",
+    "precio": 200,
+    "liga": "Internacional",
+    "stock": 30
+    },
+    {
+    "id": "7", 
+    "foto": "../assets/img/img_shop/brasilretro.webp",
+    "nombre": "Camiseta Brasil Retro",
+    "precio": 200,
+    "liga": "Internacional",
+    "stock": 30
+    },
+    {
+    "id": "8", 
+    "foto": "../assets/img/img_shop/mancity.webp",
+    "nombre": "Camiseta Machester City",
+    "precio": 200,
+    "liga": "premier league",
+    "stock": 30
+    }  
 ]
