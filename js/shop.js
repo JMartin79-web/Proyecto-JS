@@ -252,15 +252,15 @@ document.addEventListener("click", (filtrarLiga) => {
     // Crea un botón que se va a usar para remover el filtro
     // Si el boton de eliminar ya existe, no crear uno nuevo
     if(divEliminar.classList.contains("")){crearBtnEliminador()}
-        else{if(divEliminar.classList.contains("eliminarFiltro-creado")){console.log("ya existe el boton")}
-             else{crearBtnEliminador()}}
+    else{if(divEliminar.classList.contains("eliminarFiltro-creado")){console.log("ya existe el boton")}
+         else{crearBtnEliminador()}}
         
 } )
 
 // evento que escuche cuando se pulsa el boton de eliminar filtro
 document.addEventListener("click", (eliminarFiltros) => {
     // Si existe el filtro refrescar la página para eliminarlo
-    if(eliminarFiltros.target.matches(".eliminarFiltro")){location. reload()}
+    if(eliminarFiltros.target.matches(".eliminarFiltro")){location.reload()}
 })
 
 
