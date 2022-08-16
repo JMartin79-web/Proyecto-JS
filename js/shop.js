@@ -129,11 +129,6 @@ const setCarrito = (objeto) => {
 
 
 
-
-
-
-
-
 // FILTRAR LOS ELEMENTOS
 
 // creamos const para guardar el lugar del div donde va a ir el boton
