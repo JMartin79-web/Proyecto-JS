@@ -1,7 +1,7 @@
 // TAREA
 // FILTRAR LOS PRODUCTOS
 
-// BUSCADOR
+// FILTRAR EL CONTENIDO POR BUSCADOR
 // escuchamos cada tipeo que se hace
 document.addEventListener("keyup", busca =>{
 
@@ -18,9 +18,8 @@ document.addEventListener("keyup", busca =>{
             :cardProducto.classList.add("filtro__sacar")
         })
     }
+
 })
-
-
 
 
 
@@ -54,7 +53,7 @@ items.addEventListener("click", (elementoClickeado) => {
         // async y await para esperar a que se lea la informacion de la base de datos, y guardarla
 const fetchData = async () => {
     try {
-        const respuesta = await fetch("../js/api.json")
+        const respuesta = await fetch("../src/api.json")
         const data = await respuesta.json()
 
         printCards(data)
@@ -129,8 +128,7 @@ const setCarrito = (objeto) => {
 
 
 
-// FILTRAR LOS ELEMENTOS
-
+// FILTRAR EL CONTENIDO POR BOTON
 // creamos const para guardar el lugar del div donde va a ir el boton
 const divEliminar = document.getElementById("eliminarFiltro")
 
@@ -244,9 +242,7 @@ document.addEventListener("click", (filtrarLiga) => {
     }
 
 
-    // Crea un botón que se va a usar para remover el filtro
-    // Si el boton de eliminar ya existe, no crear uno nuevo
-
+    // Si lo clickeado tiene la clase filtro => Fijarse si el div donde está el botón de eliminar tiene la clase de "eliminarFiltro-creado". Si la tiene significa que el boton ya está creado. Si no la tiene, entonces se crea el boton.
     if(filtrarLiga.target.matches(".filtro")){
         if(divEliminar.classList.contains("eliminarFiltro-creado")){console.log("ya existe el boton")}
         else{crearBtnEliminador()}
