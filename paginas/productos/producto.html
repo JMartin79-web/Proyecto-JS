@@ -87,28 +87,30 @@
 
 
 <!-- ACA ESTÁN LOS TEMPLATES PARA JS -->
-<template> <!-- TEMPLATE DE LA SECTION QUE CONTIENE LA IMAGEN -->
-    <section class="img__poduct">
-        <img src="../../assets/img/img_contacto/messi_llamando.jpg" alt="imagen del producto">
+<template id="template__product"> <!-- TEMPLATE DE LA SECTION QUE CONTIENE LA IMAGEN -->
+    <section>
+        <img class="img__poduct" src="" alt="imagen del producto">
     </section>
-</template>
-
-
-<template> <!-- TEMPLATE DE LA SECTION QUE CONTIENE EL FORMULARIO Y DETALLES DEL PRODUCTO -->
+    
+<!-- SECTION QUE CONTIENE EL FORMULARIO Y DETALLES DEL PRODUCTO -->
 
     <section class="info__product">
         
         <div class="info__product__titulo"> <!-- TITULO Y PRECIO -->
-            <h2 id="nombre">NOMBRE DEL PRODUCTO</h2>
-            <p id="precio">100</p>
+            <h2 id="nombre"></h2>
+            <p id="precio"></p>
         </div>
+
         <br>
-        <div class="info__product__descripcion"> <!-- DESCRIPCION -->
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti vitae aut veniam possimus, molestiae quod, animi necessitatibus a ab quasi quaerat mollitia quisquam officia consequatur dolorem consectetur unde ipsa molestias.</p>
+
+        <div> <!-- DESCRIPCION -->
+            <p class="info__product__descripcion"></p>
         </div>
+
         <br>
+
         <div class="info__product__cantidad"> <!-- CANTIDAD -->
-            <label for="cantidad">Cantidad</label>
+            <label for="cantidad"></label>
             <input type="number" id="cantidad" name="cantidad"
             min="1" max="10" value="1">
 
@@ -123,13 +125,16 @@
                 <option value="xl">XL</option>
             </select>
         </div>
+
         <br>
+
         <button class="btn__producto">
             AGREGAR AL CARRITO
         </button>
+
     </section>
 </template>
 </body>
 
-<script src="../../js/producto.js"></script>
+<script src="../../src/producto.js"></script>
 </html>

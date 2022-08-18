@@ -114,10 +114,11 @@ const setCarrito = (objeto) => {
 
     }
     // Lo pusheo como array para despues clonarlo
-    carrito.push(productoParaCarrito)
-    console.log(carrito)
-
-
+    /*carrito.push(productoParaCarrito)
+    console.log(carrito)*/
+    carritoJSON =JSON.stringify(productoParaCarrito)
+    localStorage.setItem("carritoJSON",carritoJSON)
+    console.log(carritoJSON)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
