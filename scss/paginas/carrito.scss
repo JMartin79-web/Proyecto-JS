@@ -1,52 +1,89 @@
 //ESTILOS DE LA TABLA
 
 .carrito{
-    margin: 5% 10%;
-    background-color: aqua;
+    margin: 5% 10%;;
     display: grid;
     grid-template-areas:
-    "head head head head head head head"
-    "body body body body body body body"
-    "foot foot foot foot foot foot foot";
-}
-.carrito__head{
-    grid-area: head;
-    background-color: antiquewhite;
+    "head"
+    "body"
+    "envio"
+    "cupon"
+    "total";
+
+
+    .carrito__head{
+        grid-area: head;
+        margin: 1% 0%;
+        padding: 1% 0%;
+        @include grid-center;
+        justify-content: space-around;
+        grid-template-areas:"head1 head2 head3 head4 head5 head6";
+        grid-template-columns: 5% 20% 25% 15% 15% 15%;
+        .carrito__head__div1{grid-area: head1}
+        .carrito__head__div2{grid-area: head2}
+        .carrito__head__div3{grid-area: head3}
+        .carrito__head__div4{grid-area: head4}
+        .carrito__head__div5{grid-area: head5}
+        .carrito__head__div6{grid-area: head6}
+        background-color: $color-g;
+    }
     
-    /*display: grid;
-    gap: 10px 10px;
-    grid-template-areas:
-    "borrar img nombre talle cant precio subtotal";
+    .carrito__body{
+        grid-area: body;
+        @include grid-center;
+        grid-template-rows: auto;
+        background-color: $color-b;
+        row-gap: 2%;
+        margin: 1% 0% 2% 0%;
+        padding: 1% 0%;
+        
+        .carrito__body__div{
+            @include grid-center;
+            justify-content: space-around;
+            grid-template-areas: "delete foto detalle talle cantidad precio";
+            grid-template-columns: 5% 20% 25% 15% 15% 15%;
+            width: 100%;
+            .body-row{
+                @include d-flex-center;
+                padding: 5%;
+                
+            }
+            .carrito__body__div__row1{grid-area: delete;}
+            .carrito__body__div__row2{grid-area: foto;.img_carrito{width: 200px;height: 200px;object-fit: cover; overflow: hidden;}}
+            .carrito__body__div__row3{grid-area: detalle;}
+            .carrito__body__div__row4{grid-area: talle;}
+            .carrito__body__div__row5{grid-area: cantidad;}
+            .carrito__body__div__row6{grid-area: precio;}
+        }
+        
+    }
     
-    &:first-child{grid-area: borrar;width: 10%;}
-    &:nth-child(2){grid-area: img; width: 15%;}
-    &:nth-child(3){grid-area: nombre; width: 15%;}
-    &:nth-child(4){grid-area: talle; width: 15%;}
-    &:nth-child(5){grid-area: cant; width: 15%;}
-    &:nth-child(6){grid-area: precio; width: 15%;}
-    &:nth-child(7){grid-area: subtotal; width: 15%;}
-    */
+    .carrito__envio{
+        grid-area: envio;
+        padding: 1% 0%;
+        @include grid-center;
+        grid-template-areas:"envio1 envio2 envio3 envio4 envio5 envio6";
+        background-color: $color-g;
+    }
+    
+    .carrito__cupon{
+        grid-area: cupon;
+        padding: 1% 0%;
+        @include grid-center;
+        grid-template-areas:"cupon1 cupon2 cupon3 cupon4 cupon5 cupon6";
+        background-color: $color-g;
+    }
+    
+    .carrito__total{
+        grid-area: total;
+        padding: 1% 0%;
+        @include grid-center;
+        grid-template-areas:"total1 total2 total3 total4 total5 total6";
+        background-color: $color-g;
+    }
+    
+
+
+
 }
-
-.carrito__body{
-    grid-area: body;
-    background-color: rgb(143, 34, 34);
-}
-
-.carrito__foot{
-    grid-area: foot;
-    background-color: black;
-}
-
-/*
-"envio calcular nada nada nada nada envioprecio"
-    "cupon  cupon btncupon nada2 nada2 nada2 cuponprecio"
-    "nada3 nada3 nada3 nada3 fin fin fin"
-*/
-
-
-
-
-
-
 

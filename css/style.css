@@ -13,7 +13,7 @@ h1, h2, h3, h4 {
 a {
   text-decoration: none; }
 
-button {
+button, .main__product .info__product .btn__producto {
   cursor: pointer;
   border: none;
   background-color: #bce7d9;
@@ -74,7 +74,7 @@ header {
       flex-direction: column; }
       .main__img .main__img__section div h3 {
         text-align: center; }
-      .main__img .main__img__section div button {
+      .main__img .main__img__section div button, .main__img .main__img__section div .main__product .info__product .btn__producto, .main__product .info__product .main__img .main__img__section div .btn__producto {
         margin: auto; }
 
 .main__contenido {
@@ -82,40 +82,96 @@ header {
 
 .carrito {
   margin: 5% 10%;
-  background-color: aqua;
   display: grid;
-  grid-template-areas: "head head head head head head head" "body body body body body body body" "foot foot foot foot foot foot foot"; }
+  grid-template-areas: "head" "body" "envio" "cupon" "total"; }
+  .carrito .carrito__head {
+    grid-area: head;
+    margin: 1% 0%;
+    padding: 1% 0%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    grid-template-areas: "head1 head2 head3 head4 head5 head6";
+    grid-template-columns: 5% 20% 25% 15% 15% 15%;
+    background-color: #e1e8ec; }
+    .carrito .carrito__head .carrito__head__div1 {
+      grid-area: head1; }
+    .carrito .carrito__head .carrito__head__div2 {
+      grid-area: head2; }
+    .carrito .carrito__head .carrito__head__div3 {
+      grid-area: head3; }
+    .carrito .carrito__head .carrito__head__div4 {
+      grid-area: head4; }
+    .carrito .carrito__head .carrito__head__div5 {
+      grid-area: head5; }
+    .carrito .carrito__head .carrito__head__div6 {
+      grid-area: head6; }
+  .carrito .carrito__body {
+    grid-area: body;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: auto;
+    background-color: #f8f8f8;
+    row-gap: 2%;
+    margin: 1% 0% 2% 0%;
+    padding: 1% 0%; }
+    .carrito .carrito__body .carrito__body__div {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      justify-content: space-around;
+      grid-template-areas: "delete foto detalle talle cantidad precio";
+      grid-template-columns: 5% 20% 25% 15% 15% 15%;
+      width: 100%; }
+      .carrito .carrito__body .carrito__body__div .body-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5%; }
+      .carrito .carrito__body .carrito__body__div .carrito__body__div__row1 {
+        grid-area: delete; }
+      .carrito .carrito__body .carrito__body__div .carrito__body__div__row2 {
+        grid-area: foto; }
+        .carrito .carrito__body .carrito__body__div .carrito__body__div__row2 .img_carrito {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          overflow: hidden; }
+      .carrito .carrito__body .carrito__body__div .carrito__body__div__row3 {
+        grid-area: detalle; }
+      .carrito .carrito__body .carrito__body__div .carrito__body__div__row4 {
+        grid-area: talle; }
+      .carrito .carrito__body .carrito__body__div .carrito__body__div__row5 {
+        grid-area: cantidad; }
+      .carrito .carrito__body .carrito__body__div .carrito__body__div__row6 {
+        grid-area: precio; }
+  .carrito .carrito__envio {
+    grid-area: envio;
+    padding: 1% 0%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "envio1 envio2 envio3 envio4 envio5 envio6";
+    background-color: #e1e8ec; }
+  .carrito .carrito__cupon {
+    grid-area: cupon;
+    padding: 1% 0%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "cupon1 cupon2 cupon3 cupon4 cupon5 cupon6";
+    background-color: #e1e8ec; }
+  .carrito .carrito__total {
+    grid-area: total;
+    padding: 1% 0%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "total1 total2 total3 total4 total5 total6";
+    background-color: #e1e8ec; }
 
-.carrito__head {
-  grid-area: head;
-  background-color: antiquewhite;
-  /*display: grid;
-    gap: 10px 10px;
-    grid-template-areas:
-    "borrar img nombre talle cant precio subtotal";
-    
-    &:first-child{grid-area: borrar;width: 10%;}
-    &:nth-child(2){grid-area: img; width: 15%;}
-    &:nth-child(3){grid-area: nombre; width: 15%;}
-    &:nth-child(4){grid-area: talle; width: 15%;}
-    &:nth-child(5){grid-area: cant; width: 15%;}
-    &:nth-child(6){grid-area: precio; width: 15%;}
-    &:nth-child(7){grid-area: subtotal; width: 15%;}
-    */ }
-
-.carrito__body {
-  grid-area: body;
-  background-color: #8f2222; }
-
-.carrito__foot {
-  grid-area: foot;
-  background-color: black; }
-
-/*
-"envio calcular nada nada nada nada envioprecio"
-    "cupon  cupon btncupon nada2 nada2 nada2 cuponprecio"
-    "nada3 nada3 nada3 nada3 fin fin fin"
-*/
 .main__contacto {
   width: 100%;
   display: flex; }
@@ -153,7 +209,7 @@ header {
       display: flex;
       flex-direction: column;
       width: 50%; }
-      .shop .shop__filtro .shop__filtro__club button {
+      .shop .shop__filtro .shop__filtro__club button, .shop .shop__filtro .shop__filtro__club .main__product .info__product .btn__producto, .main__product .info__product .shop .shop__filtro .shop__filtro__club .btn__producto {
         margin: 5px;
         padding: 5px; }
   .shop .shop__cards {
@@ -170,7 +226,8 @@ header {
     .shop .shop__cards .card {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      height: 600px; }
       .shop .shop__cards .card .card__img {
         width: 80%;
         padding-top: 25px; }
@@ -181,18 +238,29 @@ header {
           overflow: hidden; }
       .shop .shop__cards .card .card__txt {
         width: 80%;
-        height: auto;
-        margin-bottom: 25px; }
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
         .shop .shop__cards .card .card__txt .card__txt__div .txt__liga {
           color: #4c5175; }
-        .shop .shop__cards .card .card__txt .card__txt__btn {
-          margin: auto 20%;
-          width: 60%;
-          background-color: #4c5175;
-          color: #f8f8f8;
-          padding: 5px 10px; }
         .shop .shop__cards .card .card__txt .card__txt__stock {
           font-size: 0px; }
+      .shop .shop__cards .card .card__txt__btn {
+        width: 80%;
+        cursor: pointer;
+        bottom: 0px;
+        position: relative;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0% 20%;
+        padding: 5px 10px;
+        background-color: #4c5175;
+        color: #f8f8f8; }
+        .shop .shop__cards .card .card__txt__btn:hover {
+          background-color: #1ed974; }
 
 .filtro__sacar {
   display: none !important; }
@@ -206,20 +274,25 @@ header {
 .main__product {
   display: flex;
   align-items: center;
+  justify-content: center;
   max-height: 100vh; }
-  .main__product .img__poduct {
+  .main__product .sec__img__product {
     max-width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 2%;
     padding: 2%; }
-    .main__product .img__poduct img {
+    .main__product .sec__img__product .img__product {
       width: 100%; }
   .main__product .info__product {
     width: 50%;
     padding: 2%; }
     .main__product .info__product .info__product__titulo h2 {
       font-size: xx-large; }
+    .main__product .info__product .btn__producto {
+      background-color: #4c5175;
+      color: #f8f8f8; }
 
 .product__separar {
   margin: 5%;

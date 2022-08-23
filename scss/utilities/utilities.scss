@@ -20,3 +20,8 @@ $color-a: #4c5175; // azul oscuro
     align-items: center;
     justify-content: center;
 };
+@mixin grid-center {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}

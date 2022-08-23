@@ -2,14 +2,17 @@
 
 
 .main__product{
+    
     display: flex;
     align-items: center;
+    justify-content: center;
     max-height: 100vh;
-    .img__poduct{
+    .sec__img__product{
         max-width: 50%;
         @include d-flex-center;
+        margin: 2%;
         padding: 2%;
-        img{
+        .img__product{
             width: 100%;
         }
     }
@@ -17,10 +20,12 @@
     .info__product{
         width: 50%;
         padding: 2%;
-        
-        
-        .info__product__titulo{
-            h2{font-size: xx-large;}
+        .info__product__titulo{h2{font-size: xx-large;}}
+        .btn__producto{
+            @extend button;
+
+            background-color: $color-a;
+            color: $color-b;
         }
     }
 }

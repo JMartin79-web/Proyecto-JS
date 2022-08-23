@@ -52,7 +52,6 @@
 
 <main class="main__product" id="main__product">
 
-
 </main>
 
 
@@ -88,8 +87,8 @@
 
 <!-- ACA ESTÁN LOS TEMPLATES PARA JS -->
 <template id="template__product"> <!-- TEMPLATE DE LA SECTION QUE CONTIENE LA IMAGEN -->
-    <section>
-        <img class="img__poduct" src="" alt="imagen del producto">
+    <section class="sec__img__product">
+        <img class="img__product" src="" alt="imagen del producto">
     </section>
     
 <!-- SECTION QUE CONTIENE EL FORMULARIO Y DETALLES DEL PRODUCTO -->
@@ -110,7 +109,7 @@
         <br>
 
         <div class="info__product__cantidad"> <!-- CANTIDAD -->
-            <label for="cantidad"></label>
+            <label for="cantidad">Cantidad</label>
             <input type="number" id="cantidad" name="cantidad"
             min="1" max="10" value="1">
 
@@ -127,10 +126,8 @@
         </div>
 
         <br>
-
-        <button class="btn__producto">
-            AGREGAR AL CARRITO
-        </button>
+        <a href="../carrito.html" class="btn__producto" id="btn__agregar">AGREGAR AL CARRITO</a>
+        
 
     </section>
 </template>
