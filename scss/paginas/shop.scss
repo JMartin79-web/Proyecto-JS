@@ -5,6 +5,7 @@
         width: 25%;
         height: 80vh;
         background-color: $color-b;
+        body.dark & { background-color: $colorDark-negro-claro;}
         margin: 2%;
         padding: 2%;
         display: flex;
@@ -34,6 +35,7 @@
         height: 80vh;
         margin: 2%;
         background-color: $color-b;
+        body.dark & { background-color: $colorDark-negro-claro;}
 
         overflow: scroll;
         overflow-x: hidden;
@@ -65,7 +67,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                .card__txt__div{.txt__liga{ color: $color-a;}}
+                .card__txt__div{.txt__liga{color: $color-negro; body.dark &{color: $colorDark-azul;}}}
                 .card__txt__stock{
                     font-size: 0px;
                 }
@@ -86,10 +88,15 @@
                 margin: 0% 20%;
                 padding: 5px 10px;
                 
-                background-color: $color-a;
                 color: $color-b;
+                background-color: $color-negro;
+                body.dark & {
+                    color: $colorDark-b;
+                    background-color: $colorDark-azul-oscuro;
+                }
                 
-                &:hover{background-color: $color-vf;}
+                @include hover-btn;
+                body.dark & {@include hoverDark-btn}
             }
 
             
@@ -106,8 +113,16 @@
    display: none!important;   
 }
 .eliminarFiltro{
-    background-color: $color-g;
+    cursor: pointer;
     font-size: 0.8rem;
     font-weight: 400;
     padding: 5px 10px;
+    color: $color-b;
+    background-color: $color-negro;
+    @include hover-btn;
+    body.dark & {
+        color: $colorDark-b;
+        background-color: $colorDark-azul-oscuro;
+        @include hoverDark-btn
+    }
 }

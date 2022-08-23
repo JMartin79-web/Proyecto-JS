@@ -25,7 +25,7 @@
         .carrito__head__div4{grid-area: head4}
         .carrito__head__div5{grid-area: head5}
         .carrito__head__div6{grid-area: head6}
-        background-color: $color-g;
+        background-color: $color-b;
     }
     
     .carrito__body{
@@ -48,7 +48,7 @@
                 padding: 5%;
                 
             }
-            .carrito__body__div__row1{grid-area: delete;}
+            .carrito__body__div__row1{grid-area: delete; span{cursor: pointer;}}
             .carrito__body__div__row2{grid-area: foto;.img_carrito{width: 200px;height: 200px;object-fit: cover; overflow: hidden;}}
             .carrito__body__div__row3{grid-area: detalle;}
             .carrito__body__div__row4{grid-area: talle;}
@@ -63,7 +63,7 @@
         padding: 1% 0%;
         @include grid-center;
         grid-template-areas:"envio1 envio2 envio3 envio4 envio5 envio6";
-        background-color: $color-g;
+        background-color: $color-b;
     }
     
     .carrito__cupon{
@@ -71,7 +71,7 @@
         padding: 1% 0%;
         @include grid-center;
         grid-template-areas:"cupon1 cupon2 cupon3 cupon4 cupon5 cupon6";
-        background-color: $color-g;
+        background-color: $color-b;
     }
     
     .carrito__total{
@@ -79,7 +79,7 @@
         padding: 1% 0%;
         @include grid-center;
         grid-template-areas:"total1 total2 total3 total4 total5 total6";
-        background-color: $color-g;
+        background-color: $color-b;
     }
     
 

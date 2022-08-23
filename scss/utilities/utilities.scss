@@ -1,12 +1,32 @@
 // VAR COLORES
 
 // COLORS
-$color-v: #bce7d9; // verde agua
-$color-vf:#1ed974; // verde fuerte
-$color-b: #f8f8f8; // blanco
-$color-g: #e1e8ec; // gris
-$color-a: #4c5175; // azul oscuro
+$color-b: #FFFFFF; // blanco
 
+$color-azul: #3e92cc; // azul
+$color-azul-oscuro: #0a2463; // azul oscuro
+$color-rosa:#d8315b; // rosa-entonador
+
+$color-g-claro: #fcfcfc; // gris claro
+$color-g: #8c8987; // gris
+$color-g-oscuro: #4c4b49; // gris oscuro
+$color-negro: #1e1b18; // negro
+
+
+// COLORS DARK THEME
+$colorDark-b: #FFFFFF; // blanco
+
+$colorDark-azul: #7aafcc; // azul
+$colorDark-azul-oscuro: #21385e; // azul oscuro
+$colorDark-rosa:#d64c73; // rosa-entonador
+
+$colorDark-g-claro: #FCFCFC; // gris claro
+$colorDark-g-claro80: #fcfcfcdc;
+
+$colorDark-g: #8c8987; // gris
+$colorDark-g-oscuro: #4c4b49; // gris oscuro
+$colorDark-negro-claro: #201e1b; // negro
+$colorDark-negro: #1e1b18; // negro
 
 @mixin d-flex-center{
     display: flex;
@@ -24,4 +44,20 @@ $color-a: #4c5175; // azul oscuro
     display: grid;
     align-items: center;
     justify-items: center;
+}
+
+@mixin hover-btn {
+    &:hover{background-color: $color-rosa;}
+}
+
+@mixin hover-a {
+    &:hover{color: $color-azul;}
+}
+
+// MIXIN PARA MODO OSCURO
+@mixin hoverDark-btn {
+    &:hover{background-color: $colorDark-rosa;}
+}
+@mixin hoverDark-a {
+    &:hover{color: $colorDark-rosa;}
 }

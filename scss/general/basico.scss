@@ -9,14 +9,22 @@
     
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
-
+    color: $color-negro;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    body.dark & {color: $colorDark-g-claro80;}
 }
 
+body{
+    background-color: $color-g-claro;
+    &.dark{
+        background-color: $colorDark-negro;
+    }
+}
 // TITULOS
 h1,h2,h3,h4{
     font-weight: 700;
+    body.dark & {color: $colorDark-g-claro;}
 }
 a{text-decoration: none;}
 
@@ -26,13 +34,25 @@ a{text-decoration: none;}
 button{
     cursor: pointer;
     border: none;
-    background-color: $color-v;
+    color: $color-b;
+    background-color: $color-negro;
     padding: 15px;
     font-weight: 600;
+    @include hover-btn;
+    body.dark & {
+        @include hoverDark-btn;
+        color: $colorDark-b;
+        background-color: $colorDark-azul-oscuro;
+    }
 }
 
 .btn-clicked{
-    background-color: $color-vf;
     color: $color-b;
-    font-weight: 700;
+    background-color: $color-rosa;
+    font-weight: 800;
+
+    body.dark & {
+        color: $colorDark-b;
+        background-color: $colorDark-rosa;
+    }
 }

@@ -1,0 +1,47 @@
+// BOTÓN DE CAMBIAR TEMA
+
+#theme{border: 5px solid $color-b; body.dark &{border: 5px solid $colorDark-negro-claro;}}
+.theme{
+    background-color: $color-azul;
+    padding: 0;
+    
+    border-radius: 1000px;
+    position: relative;
+    display: flex;
+    
+    span{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: $color-b;
+    }
+
+    // BOTON DE LA PELOTA   
+    &::after{
+        content: url(../../assets/img/iconos/iconodarkmode.png);
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        top: 0;
+        left: unset;
+        right: 0;
+        
+        border-radius: 100px;
+    }
+
+    // CUANDO ESTÉ ACTIVO
+
+    &.theme_active{
+        &:hover{background-color: $colorDark-rosa;}
+        &::after{
+            top: 0;
+            left: 0;
+            right: unset;}
+        background-color: $color-azul-oscuro;
+    }
+
+}

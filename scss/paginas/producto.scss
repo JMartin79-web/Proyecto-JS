@@ -23,8 +23,7 @@
         .info__product__titulo{h2{font-size: xx-large;}}
         .btn__producto{
             @extend button;
-
-            background-color: $color-a;
+            background-color: $color-negro;
             color: $color-b;
         }
     }

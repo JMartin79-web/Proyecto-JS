@@ -5,7 +5,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 1% 10%;
-    background-color: antiquewhite;
+    background-color: $color-b;
+    body.dark &{background-color: $colorDark-negro-claro;}
     position: sticky;
     flex-wrap: nowrap;
 
@@ -25,16 +26,20 @@ header{
     ul{
         list-style: none;
         display: flex;
+        align-items: center;
         justify-content: space-around;
         
         li{
             width: fit-content;
             display: flex;
             margin: 3%;
-            a{
+            a{ 
+                font-weight: 600;
                 display: inline-block;
                 text-decoration: none;
                 text-align: center;
+                @include hover-a;
+                body.dark & {@include hoverDark-a}
             }
             
         }

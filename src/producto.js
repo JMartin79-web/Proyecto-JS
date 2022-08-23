@@ -74,7 +74,13 @@ btnAgregar.addEventListener("click", () => {
         document.querySelector("#precio").innerText,
      )
      
-    // Covnertir el objeto en JSON y guardarlo en LocalStorage
-     obtenerYmandar(productoParaAgregar)
+    // Convertir el objeto en JSON y guardarlo en LocalStorage
+    obtenerYmandar(productoParaAgregar)
+    
+    // cambia el estilo del botón y su texto
+    btnPulsado = (elemento) => {
+        elemento.classList.add("btn-clicked");
+        elemento.innerText = "PRODUCTO AGREGADO";
+    } 
+    btnPulsado(document.getElementById("btn__agregar"))
 })
-
