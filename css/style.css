@@ -38,11 +38,12 @@ button, .main__img .main__img__section div a, .main__product .info__product .btn
     body.dark button:hover, body.dark .main__img .main__img__section div a:hover, .main__img .main__img__section div body.dark a:hover, body.dark .main__product .info__product .btn__producto:hover, .main__product .info__product body.dark .btn__producto:hover {
       background-color: #d64c73; }
 
-.btn-clicked {
+#btn-clicked {
+  cursor: url(../../assets/img/iconos/ball.svg), auto;
   color: #FFFFFF;
   background-color: #d8315b;
-  font-weight: 800; }
-  body.dark .btn-clicked {
+  font-weight: 600; }
+  body.dark #btn-clicked {
     color: #FFFFFF;
     background-color: #d64c73; }
 
@@ -115,15 +116,17 @@ header {
   grid-template-areas: "head" "body" "envio" "cupon" "total"; }
   .carrito .carrito__head {
     grid-area: head;
-    margin: 1% 0%;
-    padding: 1% 0%;
     display: grid;
     align-items: center;
     justify-items: center;
+    margin: 1% 0%;
+    padding: 1% 0%;
+    background-color: #FFFFFF;
     justify-content: space-around;
     grid-template-areas: "head1 head2 head3 head4 head5 head6";
-    grid-template-columns: 5% 20% 25% 15% 15% 15%;
-    background-color: #FFFFFF; }
+    grid-template-columns: 5% 20% 25% 15% 15% 15%; }
+    body.dark .carrito .carrito__head {
+      background-color: #201e1b; }
     .carrito .carrito__head .carrito__head__div1 {
       grid-area: head1; }
     .carrito .carrito__head .carrito__head__div2 {
@@ -141,11 +144,13 @@ header {
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-rows: auto;
-    background-color: #FFFFFF;
-    row-gap: 2%;
     margin: 1% 0% 2% 0%;
-    padding: 1% 0%; }
+    padding: 1% 0%;
+    background-color: #FFFFFF;
+    grid-template-rows: auto;
+    row-gap: 2%; }
+    body.dark .carrito .carrito__body {
+      background-color: #201e1b; }
     .carrito .carrito__body .carrito__body__div {
       display: grid;
       align-items: center;
@@ -186,6 +191,8 @@ header {
     justify-items: center;
     grid-template-areas: "envio1 envio2 envio3 envio4 envio5 envio6";
     background-color: #FFFFFF; }
+    body.dark .carrito .carrito__envio {
+      background-color: #201e1b; }
   .carrito .carrito__cupon {
     grid-area: cupon;
     padding: 1% 0%;
@@ -194,6 +201,12 @@ header {
     justify-items: center;
     grid-template-areas: "cupon1 cupon2 cupon3 cupon4 cupon5 cupon6";
     background-color: #FFFFFF; }
+    body.dark .carrito .carrito__cupon {
+      background-color: #201e1b; }
+    body.dark .carrito .carrito__cupon input {
+      background-color: #201e1b; }
+    .carrito .carrito__cupon button, .carrito .carrito__cupon .main__img .main__img__section div a, .main__img .main__img__section div .carrito .carrito__cupon a, .carrito .carrito__cupon .main__product .info__product .btn__producto, .main__product .info__product .carrito .carrito__cupon .btn__producto {
+      padding: 5px; }
   .carrito .carrito__total {
     grid-area: total;
     padding: 1% 0%;
@@ -202,6 +215,8 @@ header {
     justify-items: center;
     grid-template-areas: "total1 total2 total3 total4 total5 total6";
     background-color: #FFFFFF; }
+    body.dark .carrito .carrito__total {
+      background-color: #201e1b; }
 
 .main__contacto {
   width: 100%;
@@ -234,6 +249,8 @@ header {
       .shop .shop__filtro .shop__filtro__buscar input {
         width: 65%;
         margin-right: 10px; }
+        body.dark .shop .shop__filtro .shop__filtro__buscar input {
+          background-color: #201e1b; }
     .shop .shop__filtro .shop__filtro__filtrar h4 {
       display: inline-flex; }
     .shop .shop__filtro .shop__filtro__filtrar .shop__filtro__filtrar__rango {
@@ -344,6 +361,8 @@ header {
     .main__product .info__product .btn__producto {
       background-color: #1e1b18;
       color: #FFFFFF; }
+    body.dark .main__product .info__product #cantidad, body.dark .main__product .info__product #talle {
+      background-color: #201e1b; }
 
 .product__separar {
   margin: 5%;
@@ -359,6 +378,11 @@ header {
     .product__separar div a {
       margin: 0 1%;
       text-align: center; }
+
+.main__product__relacionados {
+  display: flex;
+  align-items: center;
+  margin: 2% 10%; }
 
 #theme {
   border: 5px solid #FFFFFF; }

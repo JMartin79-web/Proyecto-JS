@@ -46,11 +46,11 @@ button{
     }
 }
 
-.btn-clicked{
+#btn-clicked{
+    cursor: url(../../assets/img/iconos/ball.svg), auto;
     color: $color-b;
     background-color: $color-rosa;
-    font-weight: 800;
-
+    font-weight: 600;
     body.dark & {
         color: $colorDark-b;
         background-color: $colorDark-rosa;

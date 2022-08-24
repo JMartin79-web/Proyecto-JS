@@ -26,6 +26,7 @@
             background-color: $color-negro;
             color: $color-b;
         }
+        #cantidad, #talle {body.dark &{ background-color: $colorDark-negro-claro;}}
     }
 }
 
@@ -40,3 +41,9 @@
         margin-bottom: 10px;}
 }
 
+// SECCION VER MÁS
+.main__product__relacionados{
+    display: flex;
+    align-items: center;
+    margin: 2% 10%;
+}

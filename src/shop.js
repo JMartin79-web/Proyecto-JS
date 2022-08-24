@@ -53,6 +53,7 @@ const printCards = (data) => {
 
         const clone = templateCard.cloneNode(true)
         fragmento.appendChild(clone)
+        
     })
     items.appendChild(fragmento)
 }
@@ -93,8 +94,8 @@ const setCarrito = (objeto) => {
     }
 
     // Lo guarda al producto seleccionado en formato JSON para enviarlo a la sigueinte página
-    carritoJSON =JSON.stringify(productoParaCarrito)
-    localStorage.setItem("carritoJSON",carritoJSON)
+    productoJSON =JSON.stringify(productoParaCarrito)
+    localStorage.setItem("productoJSON",productoJSON)
     
 
 }

@@ -14,7 +14,7 @@
     
         .shop__filtro__buscar{
             display: inline-flex;
-            input{width: 65%; margin-right: 10px;}
+            input{width: 65%; margin-right: 10px; body.dark &{ background-color: $colorDark-negro-claro;}}
         }
         .shop__filtro__filtrar{
             h4{display: inline-flex;}

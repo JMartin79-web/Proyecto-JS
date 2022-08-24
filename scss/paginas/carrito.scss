@@ -13,9 +13,11 @@
 
     .carrito__head{
         grid-area: head;
+        @include grid-center;
         margin: 1% 0%;
         padding: 1% 0%;
-        @include grid-center;
+        background-color: $color-b;
+        body.dark &{ background-color: $colorDark-negro-claro;}
         justify-content: space-around;
         grid-template-areas:"head1 head2 head3 head4 head5 head6";
         grid-template-columns: 5% 20% 25% 15% 15% 15%;
@@ -25,18 +27,19 @@
         .carrito__head__div4{grid-area: head4}
         .carrito__head__div5{grid-area: head5}
         .carrito__head__div6{grid-area: head6}
-        background-color: $color-b;
+        
     }
     
     .carrito__body{
         grid-area: body;
         @include grid-center;
-        grid-template-rows: auto;
-        background-color: $color-b;
-        row-gap: 2%;
         margin: 1% 0% 2% 0%;
         padding: 1% 0%;
-        
+        background-color: $color-b;
+        body.dark &{ background-color: $colorDark-negro-claro;}
+
+        grid-template-rows: auto;
+        row-gap: 2%;
         .carrito__body__div{
             @include grid-center;
             justify-content: space-around;
@@ -64,6 +67,7 @@
         @include grid-center;
         grid-template-areas:"envio1 envio2 envio3 envio4 envio5 envio6";
         background-color: $color-b;
+        body.dark &{ background-color: $colorDark-negro-claro;}
     }
     
     .carrito__cupon{
@@ -72,6 +76,9 @@
         @include grid-center;
         grid-template-areas:"cupon1 cupon2 cupon3 cupon4 cupon5 cupon6";
         background-color: $color-b;
+        body.dark &{ background-color: $colorDark-negro-claro;}
+        input{body.dark &{background-color: $colorDark-negro-claro;}}
+        button{padding: 5px;}
     }
     
     .carrito__total{
@@ -80,6 +87,7 @@
         @include grid-center;
         grid-template-areas:"total1 total2 total3 total4 total5 total6";
         background-color: $color-b;
+        body.dark &{ background-color: $colorDark-negro-claro;}
     }
     
 

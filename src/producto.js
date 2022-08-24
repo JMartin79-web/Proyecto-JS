@@ -1,7 +1,7 @@
 // Obtenemos la información del producto de la página shop
 
 // Almacena un objeto
-let JSONobtenido = JSON.parse(localStorage.getItem("carritoJSON"))
+let JSONobtenido = JSON.parse(localStorage.getItem("productoJSON"))
 // Verificar que tiene el JSONobtenido --> console.log(typeof(JSONobtenido))
 
 arrayProducto = []
@@ -36,37 +36,36 @@ mainProduct.appendChild(fragmentoProducto)
 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-// RECOPILAMOS LA INFORMACIÓN INGRESADA DE LA PÁGINA PRODUCTO
-
-const mandarAlCarrito = ( ) => { }
-
 // Seleccionamos el botón
 const btnAgregar = document.getElementById("btn__agregar")
 
 
 // Creamos una clase para que se guarde los nuevos datos a obtener
 class Producto {
-    constructor(foto, nombre, talle, cantidad, precio){
+    constructor(id, foto, nombre, talle, cantidad, precio){
+        this.id = id
         this.foto = foto
         this.nombre = nombre
         this.talle = talle
         this.cantidad = cantidad
-        
         this.precio = precio
     }
 }
 
 // Función para obtener el objeto
+const productoAgregado = [];
 obtenerYmandar = (obtener) => {
     obtenidoJSON = JSON.stringify(obtener)
-    localStorage.setItem("obtenidoJSON",obtenidoJSON)
+    console.log(obtenidoJSON)
+    localStorage.setItem(`obtenidoJSON${obtener.id}`,obtenidoJSON)
+
 }
 
 // Evento de cuando se apreta ese botón, obtiene toda la información siguiendo la clase establecida previamente
 btnAgregar.addEventListener("click", () => {
 
      let productoParaAgregar = new Producto(
+        JSONobtenido.id,
         document.querySelector(".img__product").src,
         document.querySelector("h2").innerText,
         document.querySelector("#talle").value,
@@ -76,11 +75,16 @@ btnAgregar.addEventListener("click", () => {
      
     // Convertir el objeto en JSON y guardarlo en LocalStorage
     obtenerYmandar(productoParaAgregar)
-    
+
     // cambia el estilo del botón y su texto
     btnPulsado = (elemento) => {
-        elemento.classList.add("btn-clicked");
+        elemento.setAttribute("id", "btn-clicked");
         elemento.innerText = "PRODUCTO AGREGADO";
     } 
     btnPulsado(document.getElementById("btn__agregar"))
 })
+
+
+// Seccion ver relacionados
+
+const relacionados = document.getElementById("relacionados__cards")
