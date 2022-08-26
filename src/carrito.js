@@ -7,10 +7,10 @@ for(let i = 0; i< localStorage.length; i++){
     clave = key
     console.log(clave)
     let producto = JSON.parse(localStorage.getItem(key))
-
+    
     // Si la clave(es decir el nombre de donde se guardaron los datos del producto en el LocalStorage), es "productoJSON", significa que es un local del la página shop, y por ende no tiene que estar en el carrito(porque su proposito es recopilar la información para mandarlo a la pagina producto). Por eso, solo se pushean al array los que no tienen ese valor en la clave. 
-    if(clave !== "productoJSON"){arrayCarrito.push(producto)}
-
+    if(clave !== "productoJSON" && "diaLimite"){arrayCarrito.push(producto)}
+    
 }
 
 // Obtener el lugar donde cada product va a ser insertado

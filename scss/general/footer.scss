@@ -1,0 +1,53 @@
+footer{
+    background-color: $color-b;
+    body.dark &{background-color: $colorDark-negro-claro;}
+    
+    margin-top: 5%;
+    padding: 5% 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    .footer__titulo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2%;
+        h3{
+            border-bottom: 2px solid $color-azul ;
+            body.dark &{ border-bottom: 2px solid $colorDark-rosa;}
+            padding: 2%;
+        }
+        
+    }
+    .foot{
+        display: flex;
+        justify-content: center;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 5%;
+        .footer__div{
+            display: flex;
+            flex-direction: column;
+            max-width: 40%;
+        }
+    }
+    
+        // Pelota
+        .pelota{
+            z-index: 5;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: $color-azul;
+            body.dark &{background-color: $colorDark-rosa;}
+            animation: rebota 1s alternate infinite ease-in;
+          }
+          
+
+
+    
+    
+
+}

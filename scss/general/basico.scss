@@ -12,10 +12,12 @@
     color: $color-negro;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
     body.dark & {color: $colorDark-g-claro80;}
 }
 
 body{
+    overflow-x: hidden;
     background-color: $color-g-claro;
     &.dark{
         background-color: $colorDark-negro;

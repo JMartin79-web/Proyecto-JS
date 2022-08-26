@@ -8,7 +8,7 @@ btnTheme.addEventListener("click", ( ) => {
     btnTheme.classList.toggle("theme_active")
 
     // Guardar la configuración
-    if(document.body.classList.contains("dark")){
+   if(document.body.classList.contains("dark")){
         localStorage.setItem("dark-mode", "activado")
     } else {
         localStorage.setItem("dark-mode", "desactivado")

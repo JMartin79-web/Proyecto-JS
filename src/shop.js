@@ -162,7 +162,11 @@ document.addEventListener("click", (filtrarLiga) => {
     filtrarLiga.target.matches(".filtro_internacional") && esconderCards("internacional") // INTERNACIONAL
     
     // Si lo clickeado tiene la clase filtro => Fijarse si el div donde está el botón de eliminar tiene la clase de "eliminarFiltro-creado". Si la tiene significa que el boton ya está creado. Si no la tiene, entonces se crea el boton.
-    if(filtrarLiga.target.matches(".filtro")){divEliminar.classList.contains("eliminarFiltro-creado") ?console.log("ya existe el boton") :crearBtnEliminador()}
+    if(filtrarLiga.target.matches(".filtro")){
+        if(divEliminar.classList.contains("eliminarFiltro-creado")){
+            console.log("ya existe el boton")
+        } else {crearBtnEliminador()}
+    }
 
 })
 
