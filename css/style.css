@@ -156,9 +156,8 @@ footer {
       .main__img .main__img__section .contador .contador_div2 {
         grid-area: contador;
         display: grid;
-        grid-template-areas: "dia separador hora separador minuto separador segundo";
-        grid-template-columns: repeat(7, 1fr);
-        justify-content: center; }
+        justify-content: center;
+        grid-template-columns: repeat(7, 1fr); }
       .main__img .main__img__section .contador .contador_div3 {
         grid-area: boton; }
       .main__img .main__img__section .contador .contador_div a {

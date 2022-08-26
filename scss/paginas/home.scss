@@ -27,9 +27,8 @@
             .contador_div2{
                 grid-area: contador;
                 display: grid;
-                grid-template-areas:"dia separador hora separador minuto separador segundo";
-                grid-template-columns: repeat(7, 1fr);
                 justify-content: center;
+                grid-template-columns: repeat(7, 1fr);
             }
             .contador_div3{grid-area: boton;}
            
