@@ -591,3 +591,6 @@ footer {
       top: 0;
       left: 0;
       right: unset; }
+
+.sa-carrito {
+  background-color: aqua; }
