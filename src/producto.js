@@ -82,6 +82,7 @@ btnAgregar.addEventListener("click", () => {
         elemento.innerText = "PRODUCTO AGREGADO";
     } 
     btnPulsado(document.getElementById("btn__agregar"))
+
 })
 
 

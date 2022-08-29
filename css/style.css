@@ -319,7 +319,8 @@ footer {
       /* Para chrome*/
       /* para Firefox */
       /* para IE */
-      /* ESTILOS PARA EL SLIDER*/ }
+      /* ESTILOS PARA EL SLIDER*/
+      /* TEXTO ABAJO DEL INPUT */ }
       .shop .shop__filtro .shop__filtro__range div {
         display: flex;
         align-items: flex-end; }

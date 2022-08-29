@@ -56,12 +56,9 @@
             input[type=range]::-moz-range-track {@include slider-track}
             input[type=range]::-ms-track {@include slider-track;background: transparent;border-color: transparent;color: transparent;}
 
-
+            /* TEXTO ABAJO DEL INPUT */
             #p-range{ margin-top: 5%;}
         }
-
-
-
 
         .shop__filtro__club{
             display: flex;
