@@ -63,3 +63,35 @@ $colorDark-negro: #1e1b18; // negro
 @mixin hoverDark-a {
     &:hover{color: $colorDark-rosa;}
 }
+
+
+
+// SLIDER
+
+@mixin slider-default{
+    -webkit-appearance: none;
+    width: 100%;
+    cursor: pointer;
+    color: transparent;
+    background: transparent;
+    border-color: transparent;
+}
+
+@mixin slider-thumb{
+    border: none;
+    height: 17px;
+    width: 17px;
+    margin-top: -8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background:$color-negro; 
+    body.dark & {background: $colorDark-rosa;}
+}
+@mixin slider-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background: $color-azul;
+    body.dark & {background: $colorDark-azul-oscuro;}
+}

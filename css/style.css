@@ -312,6 +312,112 @@ footer {
       display: inline-flex; }
     .shop .shop__filtro .shop__filtro__filtrar .shop__filtro__filtrar__rango {
       width: 65%; }
+    .shop .shop__filtro .shop__filtro__range {
+      max-width: 50%;
+      /* ELIMINAR DEFAULT */
+      /* ESTILOS DE LA PELOTITA*/
+      /* Para chrome*/
+      /* para Firefox */
+      /* para IE */
+      /* ESTILOS PARA EL SLIDER*/ }
+      .shop .shop__filtro .shop__filtro__range div {
+        display: flex;
+        align-items: flex-end; }
+      .shop .shop__filtro .shop__filtro__range span {
+        font-size: 3rem;
+        transform: scaleX(-1);
+        width: 20%;
+        color: #1e1b18;
+        top: 0;
+        right: 0;
+        margin-left: 5%;
+        float: left; }
+        body.dark .shop .shop__filtro .shop__filtro__range span {
+          color: #d64c73; }
+      .shop .shop__filtro .shop__filtro__range input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        cursor: pointer;
+        color: transparent;
+        background: transparent;
+        border-color: transparent; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 100%;
+        cursor: pointer;
+        color: transparent;
+        background: transparent;
+        border-color: transparent; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]:focus {
+        outline: none; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-ms-track {
+        -webkit-appearance: none;
+        width: 100%;
+        cursor: pointer;
+        color: transparent;
+        background: transparent;
+        border-color: transparent; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-webkit-slider-thumb {
+        border: none;
+        height: 17px;
+        width: 17px;
+        margin-top: -8px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #1e1b18; }
+        body.dark .shop .shop__filtro .shop__filtro__range input[type=range]::-webkit-slider-thumb {
+          background: #d64c73; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-moz-range-thumb {
+        border: none;
+        height: 17px;
+        width: 17px;
+        margin-top: -8px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #1e1b18; }
+        body.dark .shop .shop__filtro .shop__filtro__range input[type=range]::-moz-range-thumb {
+          background: #d64c73; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-ms-thumb {
+        border: none;
+        height: 17px;
+        width: 17px;
+        margin-top: -8px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #1e1b18; }
+        body.dark .shop .shop__filtro .shop__filtro__range input[type=range]::-ms-thumb {
+          background: #d64c73; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        background: #3e92cc; }
+        body.dark .shop .shop__filtro .shop__filtro__range input[type=range]::-webkit-slider-runnable-track {
+          background: #21385e; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #3e92cc; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        background: #3e92cc; }
+        body.dark .shop .shop__filtro .shop__filtro__range input[type=range]::-moz-range-track {
+          background: #21385e; }
+      .shop .shop__filtro .shop__filtro__range input[type=range]::-ms-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        background: #3e92cc;
+        background: transparent;
+        border-color: transparent;
+        color: transparent; }
+        body.dark .shop .shop__filtro .shop__filtro__range input[type=range]::-ms-track {
+          background: #21385e; }
+      .shop .shop__filtro .shop__filtro__range #p-range {
+        margin-top: 5%; }
     .shop .shop__filtro .shop__filtro__club {
       display: flex;
       flex-direction: column;

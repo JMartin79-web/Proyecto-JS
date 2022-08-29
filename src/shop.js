@@ -1,13 +1,8 @@
-// TAREA
-// FILTRAR LOS PRODUCTOS
-
-
 
 // CREAR FUNCIONALIDAD DE CARDS DINÁMICAS CONSUMIENDO UNA BASE DE DATOS
 
 // Primero que nada definimos el array donde se va a guardar el resultado de la acción del usuario( Es decir, cuando complete la acción final del boton ver mas)
 const carrito = []
-
 
 // Seleccionamos el section items, donde van a ir las tarjetas, y lo guardamos en una variable
 const items = document.getElementById("items")
@@ -16,6 +11,7 @@ const items = document.getElementById("items")
 const templateCard = document.getElementById("template__card").content
 // Creamos un fragmento
 const fragmento = document.createDocumentFragment()
+
 
 
 // CONSUMIR  API.JSON
@@ -28,16 +24,17 @@ document.addEventListener("DOMContentLoaded", () =>
         // async y await para esperar a que se lea la informacion de la base de datos, y guardarla
 const fetchData = async () => {
     try {
-        const respuesta = await fetch("../src/api.json")
+        const respuesta = await fetch("../src/productos.json")
         const data = await respuesta.json()
-
         printCards(data)
-
-    } catch (error) {
+        valoresRango(data)
+    }
+    catch (error) {
         // si da error, registrarlo en la consola
-        console.log("Algo salió mal: ", error)
+        console.error("Algo salió mal: ", error)
     }
 }
+
 
 // Creamos la función que toma la información que proporciona el fetch y crea por cada elemento las siguientes clases siguiendo el template
 const printCards = (data) => {
@@ -177,3 +174,44 @@ document.addEventListener("click", (eliminarFiltros) => {
 })
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// INPUT TIPO RANGO
+
+// Seleccionamos el input
+const inputRango = document.getElementById("range")
+// Seleccionamos el p, al lado del input
+const pRango = document.getElementById("p-range")
+
+const arrayRangoPrecio = []
+// Función que asigna valor minimo y máximo al rango
+const valoresRango = (data) => {
+
+    data.forEach(producto => {arrayRangoPrecio.push(producto.precio)})
+
+    // Se asigna el valor minimo y maximo
+    inputRango.min = Math.min.apply(null, arrayRangoPrecio)
+    inputRango.max = Math.max.apply(null, arrayRangoPrecio)
+    
+    // Se asigna el valor maximo, y se lo pone como límite
+    inputRango.value = Math.max.apply(null, arrayRangoPrecio)
+    pRango.innerText = `Hasta: ${inputRango.value} ARS`
+}
+
+// Si el precio sobrepasa el valor del input, crea una clase en el precio
+inputRango.oninput = () => {
+    
+    // Cambio del valor que se imprime como límite 
+    pRango.innerText = `Hasta: ${inputRango.value} ARS`
+
+    document.querySelectorAll(".card").forEach( (card) => {
+        let precio = card.querySelector(".card__txt__p")
+        parseInt(precio.textContent) <= inputRango.value
+        ?card.classList.remove("filtro__sacar")
+        :card.classList.add("filtro__sacar")
+    })
+    
+    // Crear el botón para elmiminar el filtro
+    
+}
+
+

@@ -20,6 +20,49 @@
             h4{display: inline-flex;}
             .shop__filtro__filtrar__rango{width: 65%;}
         }
+
+        .shop__filtro__range{
+            max-width: 50%;
+            div{display: flex;align-items: flex-end;}
+            span{
+                font-size: 3rem;
+                transform: scaleX(-1);
+                width: 20%;
+                color: $color-negro; body.dark &{color: $colorDark-rosa;}
+                top: 0;
+                right: 0;
+                margin-left: 5%;
+                float: left;
+            }
+
+            /* ELIMINAR DEFAULT */
+            
+            input[type=range] {@include slider-default}
+            input[type=range]::-webkit-slider-thumb {@include slider-default}
+            input[type=range]:focus {outline: none;}
+            input[type=range]::-ms-track {@include slider-default}
+
+            /* ESTILOS DE LA PELOTITA*/
+            /* Para chrome*/
+            input[type=range]::-webkit-slider-thumb {@include slider-thumb}
+            /* para Firefox */
+            input[type=range]::-moz-range-thumb {@include slider-thumb}
+            /* para IE */
+            input[type=range]::-ms-thumb {@include slider-thumb}
+
+            /* ESTILOS PARA EL SLIDER*/
+            input[type=range]::-webkit-slider-runnable-track {@include slider-track}
+            input[type=range]:focus::-webkit-slider-runnable-track {background:$color-azul;}
+            input[type=range]::-moz-range-track {@include slider-track}
+            input[type=range]::-ms-track {@include slider-track;background: transparent;border-color: transparent;color: transparent;}
+
+
+            #p-range{ margin-top: 5%;}
+        }
+
+
+
+
         .shop__filtro__club{
             display: flex;
             flex-direction: column;
