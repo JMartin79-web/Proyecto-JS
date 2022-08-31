@@ -10,7 +10,7 @@
             overflow: hidden;}
 
         .contador{
-            z-index: 3;
+            z-index: 2;
             background-color: $color-b-60;
             backdrop-filter: blur(2px);
             position: absolute;
@@ -22,15 +22,16 @@
             "contador"
             "boton";
             .contador-num{font-size: 2rem; font-weight: 600;}
-            .contador_div{padding: 0%; margin: 5% 5%;}
-            .contador_div1{grid-area: p; p{font-weight: 600;}}
+            .contador_div{padding: 0%; }
+            .contador_div1{grid-area: p; margin: 4% 2%; p{font-weight: 600;}}
             .contador_div2{
                 grid-area: contador;
                 display: grid;
                 justify-content: center;
                 grid-template-columns: repeat(7, 1fr);
+                margin: 4% 2%;
             }
-            .contador_div3{grid-area: boton;}
+            .contador_div3{grid-area: boton; margin: 4% 2%;}
            
             .contador_div{
                 a{@extend button;

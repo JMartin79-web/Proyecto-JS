@@ -42,10 +42,20 @@ $colorDark-negro: #1e1b18; // negro
     align-items: center;
     justify-content: center;
 };
+
 @mixin grid-center {
     display: grid;
     align-items: center;
     justify-items: center;
+}
+
+@mixin grid-carrito-final{
+    display: grid;
+    padding: 1% 5%;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: $color-b;
+    body.dark &{ background-color: $colorDark-negro-claro;}
 }
 
 @mixin hover-btn {

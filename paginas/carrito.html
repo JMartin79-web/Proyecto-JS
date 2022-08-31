@@ -13,9 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     
     <link rel="stylesheet" href="../css/style.css" type="text/css">
-
-    <!-- Toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     
     <title>Carrito</title>
 </head>
@@ -83,39 +80,43 @@
     </section>
 
     <section class="carrito__envio">
-            <div class="carrito__envio__div">
-                <p>Envio</p>
-            </div>
-            <div class="carrito__envio__div"></div>
-            <div class="carrito__envio__div"></div>
-            <div class="carrito__envio__div"></div>
-            <div class="carrito__envio__div"></div>
-            <div class="carrito__envio__div"></div>
+        <div class="carrito__envio__div1"><p>Envio</p></div>
+        <div class="carrito__envio__div2"></div>
+        <div class="carrito__envio__div3"></div>
+        <div class="carrito__envio__div4"></div>
+        <div class="carrito__envio__div5"></div>
+        <div class="carrito__envio__div6"><p id="envio-num"></p></div>
 
     </section>
 
     <section class="carrito__cupon">
-        <div class="carrito__cupon__div">
+        <div class="carrito__cupon__div1">
             <input type="text" name="cupon" id="agregar_cupon" placeholder="Agregar Cupón">
+            <button type="submit">Agregar</button>
         </div>
-        <div class="carrito__cupon__div"><button type="submit">Agregar</button></div>
-        <div class="carrito__cupon__div"></div>
-        <div class="carrito__cupon__div"></div>
-        <div class="carrito__cupon__div"></div>
-        <div class="carrito__cupon__div"></div>
+        <div class="carrito__cupon__div2"></div>
+        <div class="carrito__cupon__div3"></div>
+        <div class="carrito__cupon__div4"></div>
+        <div class="carrito__cupon__div5"></div>
+        <div class="carrito__cupon__div6"><p id="cupon-num">10</p></div>
 
     </section>
 
     <section class="carrito__total">
-        <div class="carrito__total__div">
-            <p>Total</p>
-        </div>
-        <div class="carrito__total__div"></div>
-        <div class="carrito__total__div"></div>
-        <div class="carrito__total__div"></div>
-        <div class="carrito__total__div"></div>
-        <div class="carrito__total__div"></div>
+        <div class="carrito__total__div1"><p>Total</p></div>
+        <div class="carrito__total__div2"></div>
+        <div class="carrito__total__div3"></div>
+        <div class="carrito__total__div4"></div>
+        <div class="carrito__total__div5"></div>
+        <div class="carrito__total__div6"><p id="total-num">10</p></div>
+    </section>
 
+    <section class="carrito__finalizar">
+        <div class="carrito__finalizar__div1"></div>
+        <div class="carrito__finalizar__div2"></div>
+        <div class="carrito__finalizar__div3"></div>
+        <div class="carrito__finalizar__div4"></div>
+        <div class="carrito__finalizar__div5"><button id="finalizar-compraBtn">FINALIZAR COMPRA</button></div>
     </section>
 
 </main>
@@ -158,17 +159,20 @@
 
 
 
-
+<!-- <div class="body-row carrito__body__div__row1"><span class="material-symbols-outlined">delete</span></div> -->
 <!-- TEMPLATE PARA CARRITO BODY -->
 <template id="template__carrito__body">
     <div class="carrito__body__div">
 
-        <div class="body-row carrito__body__div__row1"><span class="material-symbols-outlined">delete</span></div>
+        
+        <div class="body-row carrito__body__div__row1">
+            <button class="btn-carrito-delete"><span class="material-symbols-outlined">delete</span></button>
+        </div>
         <div class="body-row carrito__body__div__row2"><img class="img_carrito"></div>
         <div class="body-row carrito__body__div__row3"><p></p></div>
         <div class="body-row carrito__body__div__row4"><p></p></div>
         <div class="body-row carrito__body__div__row5"><p></p></div>
-        <div class="body-row carrito__body__div__row6"><p></p></div>
+        <div class="body-row carrito__body__div__row6"><p class="body-precio"></p></div>
     </div>
 </template>
 </body>

@@ -8,7 +8,8 @@
     "body"
     "envio"
     "cupon"
-    "total";
+    "total"
+    "finalizar";
 
 
     .carrito__head{
@@ -63,35 +64,41 @@
     
     .carrito__envio{
         grid-area: envio;
-        padding: 1% 0%;
-        @include grid-center;
+        @include grid-carrito-final; 
         grid-template-areas:"envio1 envio2 envio3 envio4 envio5 envio6";
-        background-color: $color-b;
-        body.dark &{ background-color: $colorDark-negro-claro;}
     }
     
     .carrito__cupon{
         grid-area: cupon;
-        padding: 1% 0%;
-        @include grid-center;
-        grid-template-areas:"cupon1 cupon2 cupon3 cupon4 cupon5 cupon6";
-        background-color: $color-b;
-        body.dark &{ background-color: $colorDark-negro-claro;}
+        padding: 1% 5%;
+        @include grid-carrito-final;
+        grid-template-areas:"cupon1 cupon1 cupon2 cupon3 cupon4 cupon5";
         input{body.dark &{background-color: $colorDark-negro-claro;}}
         button{padding: 5px;}
+        #agregar_cupon{margin-right: 1%;}
+        .carrito__cupon__div1{grid-area: cupon1;}
+        .carrito__cupon__div6{grid-area: cupon5;text-align: end;}
     }
     
     .carrito__total{
         grid-area: total;
-        padding: 1% 0%;
-        @include grid-center;
+        @include grid-carrito-final;
         grid-template-areas:"total1 total2 total3 total4 total5 total6";
-        background-color: $color-b;
-        body.dark &{ background-color: $colorDark-negro-claro;}
+        .carrito__total__div6{grid-area: total6;text-align: end;}
     }
     
-
+    .carrito__finalizar{
+        grid-area: finalizar;
+        @include grid-carrito-final;
+        grid-template-areas:"fin1 fin2 fin3 fin4 fin5";
+        .carrito__finalizar__div5{grid-area: fin5;text-align: end;}
+    }
 
 
 }
 
+.btn-carrito-delete{
+    background-color: transparent;
+    &:hover{background-color: transparent;  @include crecer;}
+    body .dark & {background-color: transparent;}
+}

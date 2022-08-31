@@ -9,7 +9,7 @@ header{
     body.dark &{background-color: $colorDark-negro-claro;}
     position: sticky;
     flex-wrap: nowrap;
-
+    z-index: 5;
     div{ 
         a{
         display: inline-block;

@@ -35,3 +35,30 @@ arrayCarrito.forEach((producto) => {
 });
 
 carritoBody.appendChild(carritoFragmetn)
+
+// Eliminar producto
+
+const deleteBtn = document.querySelectorAll(".btn-carrito-delete")
+console.log(deleteBtn)
+deleteBtn.addEventListener("click", () => {
+    console.log("hola")
+})
+
+
+// ALGORITMO PARA FINALIZAR LA COMRPA
+const envioCarrito =  document.getElementById("envio-num")
+const cuponCarrito =  document.getElementById("cupon-num")
+const totalCarrito =  document.getElementById("total-num")
+
+// Pusheamos los precios a un array
+const sumarCarrito = []
+function conseguirPrecios(){document.querySelectorAll(".body-precio").forEach( (precio) => {sumarCarrito.push(precio.innerHTML)})}
+setTimeout( (conseguirPrecios()), 0 )
+
+
+
+
+
+
+
+

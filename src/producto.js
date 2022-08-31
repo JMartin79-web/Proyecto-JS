@@ -83,7 +83,13 @@ btnAgregar.addEventListener("click", () => {
     } 
     btnPulsado(document.getElementById("btn__agregar"))
 
-    
+    Toastify({
+        text: "Producto agregado al carrito",
+        gravity: "bottom",
+        position: "right",
+        duration: 2000,
+        className: "toast-producto",
+    }).showToast();
 })
 
 

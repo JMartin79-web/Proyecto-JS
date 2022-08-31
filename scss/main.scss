@@ -1,6 +1,9 @@
 // UTILIDADES
 @import "./utilities/utilities";
 
+// ANIMACIONES
+@import "./utilities/animaciones.scss";
+
 // GENERAL
 @import "general/basico.scss";
 @import "general/header.scss";
@@ -14,9 +17,6 @@
 
 // PAGINA SECUNDARIA
 @import "paginas/producto.scss";
-
-// ANIMACIONES
-@import "./utilities/animaciones.scss";
 
 // MODO OSCURO
 @import "./utilities/darkmode.scss";
