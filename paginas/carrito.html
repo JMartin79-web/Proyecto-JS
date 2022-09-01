@@ -66,8 +66,7 @@
 
     
     <section class="carrito__head">
-        <div class="carrito__head__div1">
-            <span class="material-symbols-outlined">delete</span></div>
+        <div class="carrito__head__div1"></div>
         <div class="carrito__head__div2"><p>Foto</p></div>
         <div class="carrito__head__div3"><p>Descripción</p></div>
         <div class="carrito__head__div4"><p>Talle</p></div>
@@ -91,14 +90,14 @@
 
     <section class="carrito__cupon">
         <div class="carrito__cupon__div1">
-            <input type="text" name="cupon" id="agregar_cupon" placeholder="Agregar Cupón">
-            <button type="submit">Agregar</button>
+            <input type="text" name="cupon" placeholder="Agregar Cupón" id="codigo-cupon">
+            <button id="agregar_cupon">Agregar</button>
         </div>
-        <div class="carrito__cupon__div2"></div>
+        <div class="carrito__cupon__div2"><p id="cupon_invalido"></p></div>
         <div class="carrito__cupon__div3"></div>
         <div class="carrito__cupon__div4"></div>
         <div class="carrito__cupon__div5"></div>
-        <div class="carrito__cupon__div6"><p id="cupon-num">10</p></div>
+        <div class="carrito__cupon__div6"><p id="cupon-num"></p></div>
 
     </section>
 
@@ -108,7 +107,7 @@
         <div class="carrito__total__div3"></div>
         <div class="carrito__total__div4"></div>
         <div class="carrito__total__div5"></div>
-        <div class="carrito__total__div6"><p id="total-num">10</p></div>
+        <div class="carrito__total__div6"><p id="total-num"></p></div>
     </section>
 
     <section class="carrito__finalizar">
@@ -166,7 +165,7 @@
 
         
         <div class="body-row carrito__body__div__row1">
-            <button class="btn-carrito-delete"><span class="material-symbols-outlined">delete</span></button>
+            <span class="material-symbols-outlined btn-carrito-delete">delete</span>
         </div>
         <div class="body-row carrito__body__div__row2"><img class="img_carrito"></div>
         <div class="body-row carrito__body__div__row3"><p></p></div>

@@ -57,8 +57,7 @@ const productoAgregado = [];
 obtenerYmandar = (obtener) => {
     obtenidoJSON = JSON.stringify(obtener)
     console.log(obtenidoJSON)
-    localStorage.setItem(`obtenidoJSON${obtener.id}`,obtenidoJSON)
-
+    localStorage.setItem(`obtenidoJSON${+obtener.id}${obtener.talle}`,obtenidoJSON)
 }
 
 // Evento de cuando se apreta ese botón, obtiene toda la información siguiendo la clase establecida previamente
@@ -77,18 +76,17 @@ btnAgregar.addEventListener("click", () => {
     obtenerYmandar(productoParaAgregar)
 
     // cambia el estilo del botón y su texto
-    btnPulsado = (elemento) => {
+    btnPulsado = (elemento, textoNuevo) => {
         elemento.setAttribute("id", "btn-clicked");
-        elemento.innerText = "PRODUCTO AGREGADO";
+        elemento.innerText = textoNuevo;
     } 
-    btnPulsado(document.getElementById("btn__agregar"))
+    btnPulsado(document.getElementById("btn__agregar"),"PRODUCTO AGREGADO")
 
     Toastify({
         text: "Producto agregado al carrito",
         gravity: "bottom",
         position: "right",
         duration: 2000,
-        className: "toast-producto",
     }).showToast();
 })
 
