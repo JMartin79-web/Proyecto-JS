@@ -176,10 +176,33 @@ footer {
 
 .main__contenido {
   margin: 2% 10%; }
+  .main__contenido section {
+    margin: 5% 0%; }
   .main__contenido .sec__principal {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .main__contenido .sec__principal div {
-      width: 50%; }
+      width: 50%;
+      overflow: hidden; }
+      .main__contenido .sec__principal div img {
+        width: 100%;
+        max-width: 900px;
+        object-fit: contain;
+        overflow: hidden;
+        transition: all .5s ease; }
+        .main__contenido .sec__principal div img:hover {
+          scale: 1.2;
+          transition: all ease 1s; }
+    .main__contenido .sec__principal .sec__principal__div h1, .main__contenido .sec__principal .sec__principal__div h2 {
+      font-size: 2.5rem;
+      font-weight: 700; }
+    .main__contenido .sec__principal .sec__principal__div h2 {
+      color: #3e92cc; }
+      body .dark .main__contenido .sec__principal .sec__principal__div h2 {
+        color: #d64c73; }
+    .main__contenido .sec__principal .sec__principal__div p {
+      font-size: 1.2rem;
+      padding: 5% 0%; }
 
 .carrito {
   margin: 5% 10%;
@@ -317,8 +340,8 @@ footer {
   background-color: transparent; }
   .btn-carrito-delete:hover {
     background-color: transparent;
-    scale: 1.1;
-    transition: ease-in-out .2s; }
+    scale: 1.2;
+    transition: all ease 1s; }
   body .dark .btn-carrito-delete {
     background-color: transparent; }
 

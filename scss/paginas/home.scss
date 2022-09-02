@@ -46,9 +46,24 @@
 
 .main__contenido{
     margin: 2% 10%;
-
+    section{margin: 5% 0%;}
     .sec__principal{
         display: flex;
-        div{width: 50%;}
+        align-items: center;
+        div{width: 50%;
+            overflow: hidden;
+           
+            img{
+                width: 100%;max-width: 900px;
+                object-fit: contain; overflow: hidden;
+                transition: all .5s ease;
+                &:hover{@include crecer}
+            }
+            }
+        .sec__principal__div{
+            h1, h2{font-size: 2.5rem; font-weight: 700;}
+            h2{color: $color-azul; body .dark &{color: $colorDark-rosa;}}
+            p{font-size: 1.2rem;padding: 5% 0%;}
+        }
     }
 }
