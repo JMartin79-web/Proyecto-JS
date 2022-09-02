@@ -176,6 +176,10 @@ footer {
 
 .main__contenido {
   margin: 2% 10%; }
+  .main__contenido .sec__principal {
+    display: flex; }
+    .main__contenido .sec__principal div {
+      width: 50%; }
 
 .carrito {
   margin: 5% 10%;

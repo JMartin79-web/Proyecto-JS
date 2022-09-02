@@ -46,4 +46,9 @@
 
 .main__contenido{
     margin: 2% 10%;
+
+    .sec__principal{
+        display: flex;
+        div{width: 50%;}
+    }
 }

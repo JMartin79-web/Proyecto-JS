@@ -46,20 +46,84 @@ arrayCarrito.forEach((producto) => {
 carritoBody.appendChild(carritoFragmetn)
 
 
-// ALGORITMO DE AGREGAR CUPÓN
 
+
+////////////////////////////////////////////////////////////////////////////////
+
+// CREAMOS VARIABLES PARA EL CUPON, ENVIO Y TOTAL
+// Conseguir el precio del envio y cupon de descuento
+let envioCarrito =  +document.getElementById("envio-num").innerText
+let cuponCarrito =  0
+// Conseguimos el total del carrito
+let totalCarrito = 0;
+precioMultiplicado.forEach( (p) => { totalCarrito += p} )
+// Funcion que consigue los datos y los suma
+function ejecutarTotal(){
+    document.getElementById("total-num").innerText = totalCarrito + (envioCarrito) + (cuponCarrito)
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+// ALGORITMO DE AGREGAR CUPÓN
+const cuponIngresado = document.getElementById("agregar_cupon")
+
+// Creamos array de descuentos
+const descuentos = [{"10off" : 10},{"20off" : 20},{"30off" : 30},{"50off" : 50}]
+
+// Escuchamos cuando se ingresa un cupón
+cuponIngresado.addEventListener( "click", () => {
+    // Guardamos el valor ingresado por el usuario en la variable cupon
+    const cupon = document.getElementById("codigo-cupon").value
+    
+    // Recorremos array descuentos para buscar coincidencias con lo ingresado
+    for (const objeto of descuentos) {
+        
+        // Si la key de algun objeto concuerda con lo ingresado
+        if(Object.keys(objeto) == cupon){
+        // Agarramos el valor de la key
+        const valor = (objeto[Object.keys(objeto)])
+        // Conseguimos el subtotal
+        let subTotal = 0;
+        precioMultiplicado.forEach( (p) => { subTotal += p} )
+        // Calculamos la cantidad que vale el cupón
+        const calculoCupon = -(subTotal * (`${0}.${valor}`))
+        console.log(calculoCupon)
+
+        // Lo ingresamos en el DOM
+        document.getElementById("cupon-num").innerText = calculoCupon
+        cuponCarrito = calculoCupon
+        ejecutarTotal()
+        // Avisamos al usuario mediante un toast
+        Toastify({
+            text: "El cupón se ingresó con éxito",
+            gravity: "bottom",
+            position: "center",
+            duration: 2000,
+        }).showToast();
+        // Bloqueamos el ingreso de nuevos cupones
+        document.getElementById("codigo-cupon").setAttribute("disabled", "")
+        }
+        
+    }
+
+    // Si no es válido, también se avisa
+    if((cupon !== "10off") && (cupon !== "20off") && (cupon !== "30off") && (cupon !== "50off")){
+        Toastify({
+            text: "El cupón ingresado no es válido",
+            gravity: "bottom",
+            position: "right",
+            duration: 2000,
+        }).showToast();
+    }
+   
+})
 
 
 // ALGORITMO PARA FINALIZAR LA COMRPA
-// Conseguir el precio del envio y cupon de descuento
-const envioCarrito =  +document.getElementById("envio-num").innerText
-const cuponCarrito =  +document.getElementById("cupon-num").innerText
 
-let totalCarrito = 0;
-precioMultiplicado.forEach( (p) => { totalCarrito += p} )
-
-//console.log(document.getElementById("total-num").innerText)
-document.getElementById("total-num").innerText = totalCarrito + (envioCarrito) + (cuponCarrito)
+// Ejecutamos el total
+ejecutarTotal()
 
 // Evento de finalizar compra
 btnFinalizarPulsado = document.getElementById("finalizar-compraBtn")
@@ -76,6 +140,7 @@ btnFinalizarPulsado.addEventListener("click", () => {
     } 
     btnPulsado(document.getElementById("finalizar-compraBtn"),"COMPRA FINALIZADA!")
 })
+
 
 
 // ELIMINAR PRODUCTO
