@@ -29,7 +29,10 @@ h1,h2,h3,h4{
     body.dark & {color: $colorDark-g-claro;}
 }
 a{text-decoration: none;}
-
+strong{ font-weight: 700;
+    color: $color-azul;
+    body.dark & {color: $colorDark-rosa;}
+}
 
 // BOTONES
 

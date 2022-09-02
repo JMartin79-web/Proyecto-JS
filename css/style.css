@@ -31,6 +31,12 @@ h1, h2, h3, h4 {
 a {
   text-decoration: none; }
 
+strong {
+  font-weight: 700;
+  color: #3e92cc; }
+  body.dark strong {
+    color: #d64c73; }
+
 button, .main__img .main__img__section .contador .contador_div a, .main__product .info__product .btn__producto {
   cursor: pointer;
   border: none;
@@ -180,7 +186,11 @@ footer {
     margin: 5% 0%; }
   .main__contenido .sec__principal {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    border-bottom: 2px solid #3e92cc;
+    padding: 5%; }
+    body.dark .main__contenido .sec__principal {
+      border-bottom: 2px solid #d64c73; }
     .main__contenido .sec__principal div {
       width: 50%;
       overflow: hidden; }
@@ -193,16 +203,72 @@ footer {
         .main__contenido .sec__principal div img:hover {
           scale: 1.2;
           transition: all ease 1s; }
-    .main__contenido .sec__principal .sec__principal__div h1, .main__contenido .sec__principal .sec__principal__div h2 {
+    .main__contenido .sec__principal .sec__principal__div h1 {
       font-size: 2.5rem;
       font-weight: 700; }
-    .main__contenido .sec__principal .sec__principal__div h2 {
-      color: #3e92cc; }
-      body .dark .main__contenido .sec__principal .sec__principal__div h2 {
-        color: #d64c73; }
     .main__contenido .sec__principal .sec__principal__div p {
       font-size: 1.2rem;
       padding: 5% 0%; }
+  .main__contenido .sec__equipos h2 {
+    text-align: center;
+    margin: 5% 0% 2%;
+    font-size: 2rem; }
+  .main__contenido .sec__equipos div {
+    overflow: hidden; }
+    .main__contenido .sec__equipos div .sec__equipos__div_img {
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      transition: all .5s ease; }
+      .main__contenido .sec__equipos div .sec__equipos__div_img:hover {
+        scale: 1.2;
+        transition: all ease 1s; }
+  .main__contenido .sec__campeones {
+    display: flex;
+    align-items: center; }
+    .main__contenido .sec__campeones .sec__campeones_div1 {
+      overflow: hidden;
+      width: 50%; }
+      .main__contenido .sec__campeones .sec__campeones_div1 img {
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        transition: all .5s ease; }
+        .main__contenido .sec__campeones .sec__campeones_div1 img:hover {
+          scale: 1.2;
+          transition: all ease 1s; }
+    .main__contenido .sec__campeones .sec__campeones_div2 {
+      width: 50%; }
+      .main__contenido .sec__campeones .sec__campeones_div2 h2 {
+        text-align: left;
+        padding: 5%; }
+      .main__contenido .sec__campeones .sec__campeones_div2 p {
+        padding: 0% 5%; }
+  .main__contenido .sec__proximamente .sec__proximamente__div {
+    display: flex;
+    align-items: center; }
+    .main__contenido .sec__proximamente .sec__proximamente__div p {
+      position: absolute;
+      z-index: 3;
+      margin: 2%;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-shadow: 4px 2px 6px #1e1b18; }
+    .main__contenido .sec__proximamente .sec__proximamente__div div {
+      overflow: hidden;
+      display: flex;
+      object-fit: scale-down; }
+      .main__contenido .sec__proximamente .sec__proximamente__div div img {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        transition: all .5s ease;
+        filter: blur(3px) brightness(80%); }
+        .main__contenido .sec__proximamente .sec__proximamente__div div img:hover {
+          scale: 1.2;
+          transition: all ease 1s; }
 
 .carrito {
   margin: 5% 10%;
