@@ -1,5 +1,4 @@
-arrayCarrito = []
-
+const arrayCarrito = []
 // RECORREMOS EL STORAGE
 for(let i = 0; i< localStorage.length; i++){
     let key = localStorage.key(i)
@@ -27,7 +26,7 @@ const precioMultiplicado = []
 
 // Por cada producto, colocamos su info dentro del carrito
 arrayCarrito.forEach((producto) => {
-
+    carritoTemplate.querySelector(".carrito__body__div__row1 span").setAttribute("id", producto.id)
     carritoTemplate.querySelector(".carrito__body__div__row2 img").setAttribute("src", producto.foto)
     carritoTemplate.querySelector(".carrito__body__div__row2 img").setAttribute("alt", "Img del producto")
     carritoTemplate.querySelector(".carrito__body__div__row3 p").innerText = producto.nombre
@@ -149,6 +148,17 @@ const deleteBtn = document.querySelectorAll(".btn-carrito-delete")
 // como deleteBtn llama a un objeto, no se le puede pasar el addEventListener. Por eso, se hace lo siguiente
 for (const btn of deleteBtn) {
     btn.addEventListener("click", () => {
-        localStorage.getItem()
+        // obtenemos id
+        let eliminarId = (btn.id)
+        // obtenemos talle
+        let padre = (btn.parentElement.parentElement)
+        console.log(padre.childNodes[7].innerText.toLowerCase())
+        let eliminarTalle = padre.childNodes[7].innerText.toLowerCase()
+
+        // Vamos al storage y lo eliminamos
+        localStorage.removeItem(`obtenidoJSON${eliminarId}${eliminarTalle}`)
+        location.reload()
     })
 }
+
+        

@@ -104,9 +104,12 @@
         .sec__proximamente__div{
             display: flex;
             align-items: center;
-            p{position: absolute; z-index: 3; margin: 2%;
+            p{
+            color: $color-b;
+            position: absolute; z-index: 3; margin: 2%;
             font-weight: 700; font-size: 1.2rem;
-            text-shadow: 4px 2px 6px $color-negro;}
+            body .dark{text-shadow: 4px 2px 6px $color-negro;}
+            }
             
             div{overflow: hidden;
                 display: flex;
@@ -116,7 +119,7 @@
                     width: 100%;
                     object-fit: cover; overflow: hidden;transition: all .5s ease;
                     &:hover{@include crecer}
-                    filter: blur(3px) brightness(80%);;
+                    filter: blur(3px) brightness(85%);;
                 }
             }
                 
