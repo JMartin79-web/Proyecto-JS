@@ -79,6 +79,12 @@ header {
   position: sticky;
   flex-wrap: nowrap;
   z-index: 5; }
+  header #logo {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #FFFFFF;
+    border-radius: 50%; }
   body.dark header {
     background-color: #201e1b; }
   header div a {
@@ -468,24 +474,35 @@ footer {
       margin: 2% 0%; }
 
 .main__info {
-  margin: 5% 10%;
+  margin: 2% 10%;
   display: flex;
   flex-direction: column; }
   .main__info h3 {
     font-size: 1.5rem;
-    margin: 2% 0; }
-  .main__info .info_sec1 ul {
-    margin: 2% 0; }
-  .main__info .info_sec1 li {
-    list-style-type: none;
-    padding-left: 10px;
-    font-size: 0.8rem; }
-  .main__info .info_sec2 {
-    margin: 2% 5%; }
-    .main__info .info_sec2 h4 strong {
-      font-size: 1.5rem; }
-    .main__info .info_sec2 div {
-      margin-top: 2%; }
+    margin: 1% 0; }
+  .main__info .info_sec1 {
+    border-bottom: 2px solid #3e92cc;
+    padding: 2%; }
+    .main__info .info_sec1 ul {
+      margin: 2% 0; }
+    .main__info .info_sec1 li {
+      list-style-type: none;
+      padding-left: 10px;
+      font-size: 0.8rem; }
+    body.dark .main__info .info_sec1 {
+      border-bottom: 2px solid #d64c73; }
+  .main__info .info_sec2 h4 strong {
+    font-size: 1.5rem; }
+  .main__info .info_sec2 div {
+    margin-top: 2%; }
+  .main__info .info_sec2 .info_sec2-paginas {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between; }
+    .main__info .info_sec2 .info_sec2-paginas .gatito {
+      padding: 5% 0%;
+      display: flex;
+      justify-content: flex-end; }
 
 .main__contacto {
   margin: 5% 10%;

@@ -27,7 +27,7 @@
 
     <div>
         <a href="../index.html">
-            <p>logo</p>
+            <img src="../assets/img/iconos/ball.svg" alt="" id="logo">
         </a>    
     </div>
 
@@ -70,7 +70,7 @@
     <h3><strong>Pero lo que si puedo hacer, es explicar como funciona el sitio</strong></h3>
 
     <section class="info_sec1">
-        <h3>Páginas</h3>
+        <h3><strong>Páginas</strong></h3>
             <ul>El sitio está compuesto por: 
                 <li>Home</li>
                 <li>Shop</li>
@@ -83,18 +83,79 @@
     <section class="info_sec2">
 
         <div>
-            <h4><strong>Home</strong></h4>
-            <p>La home tiene un CountDown hecho mediante la clase Date. <br>
-            Toma por un lado la fecha de hoy, y por otro lado la fecha de hoy, y le suma los milisegundos equivalentes a entre tres y cinco días. Los milisegundos que suma se generan de forma aleatoria y se guardan en el Local Storage. ¿Por qué? Porque así, mientras navegas por el resto del sitio, o salis del navegador y volves a entrar, esa suma random de entre 3 a 5 días no se reinicia. De otra forma, el numero se generaría con cada refresco de la página, y sería inconsistente para el usuario.
-            </p>
-        </div>
-        
-        <div>
-            <h4><strong>Shop</strong></h4>
-            <p>El shop consume un archivo <strong>.json</strong> mediante fetch.
+            <h4><strong>General</strong></h4>
+            <p>El proceso de compra pasa por la “home”, que te invita a comprar. En segundo lugar el “shop”, donde seleccionas el elemento que querés ver, lo que te redirige a “producto.html”. Este último se encarga de pedirte la cantidad que necesitás, y de qué talle. Después de estar de acuerdo con los valores a comprar, el botón “agregar al carrito” pushea los datos al Local Storage.
+            <br><br>
+            Ya casi llegamos al final, donde en la página “carrito” se ven los detalles de los productos seleccionados, y la posibilidad de agregar un cupón. Al clickear en el único botón disponible por el momento, se imprime un formulario debajo del carrito para finalizar la compra.
+            <br><br>
+            En todo este proceso, se usan los templates y fragments para minimizar el “reflow” que se pudiese generar al interactuar con la página.
+            <br>
+            Por último, tiene disponible el <strong>modo oscuro</strong>, que no se borra cuando se actualiza una página ni cuando se navega por el sitio.
             </p>
         </div>
 
+        <div class="info_sec2-paginas">
+            <div>
+                <h4><strong>Home</strong></h4>
+                <p>La home tiene un CountDown hecho mediante la clase Date. <br>
+                Toma por un lado la fecha de hoy, y por otro lado la fecha de hoy, y le suma los milisegundos equivalentes a entre tres y cinco días. Los milisegundos que suma se generan de forma aleatoria y se guardan en el Local Storage. ¿Por qué? Porque así, mientras navegas por el resto del sitio, o salis del navegador y volves a entrar, esa suma random de entre 3 a 5 días no se reinicia.
+                <br>
+                De otra forma, el número se generaría con cada refresco de la página, y sería inconsistente para el usuario.
+                </p>
+            </div>
+            
+            <div>
+                <h4><strong>Shop</strong></h4>
+                <p>El shop consume un archivo "<strong>.json</strong>" mediante fetch. Imprime cada elemento dentro de un contenedor. <br>
+                Ese contenido se puede filtrar de tres modos diferentes. Los modos son mediante un buscador, un rango de precio, y botones de ligas específicas(porque cada producto, que son camisetas, pertenecen a un equipo que a su vez, pertenece a una liga específica).
+                Cada "card" tiene un botón de ver más, que redicciona a la página producto<strong>.html</strong> <br><br>
+                Y además guarda en el Local Storage la información necesaria para la siguiente etapa.
+                </p>
+            </div>
+    
+            <div>
+                <h4><strong>Producto</strong></h4>
+                <p>
+                    Toma los datos proporcionados por la página anterior(no se puede acceder a la página producto.html sin antes haber clickeado en el botón ver más del shop.html), que los manda en formato JSON.
+                    Los muestra, y genera un nuevo JSON al clickear el botón “AGREGAR AL CARRITO”.
+                    <br>
+                    Este JSON se guarda con el id y talle de lo seleccionado, para que el usuario no pueda equivocarse y pedir lo mismo dos veces, porque se reemplaza. Simplemente debe agregar la cantidad que quiera de ese talle, y mandarlo al carrito.    
+                </p>
+            </div>
+    
+            <div>
+                <h4><strong>Nosotros</strong></h4>
+                <p>
+                    Esta página, como no tenía contenido sobre la marca(porque es una simulación), decidí usarla como el “<strong>README</strong>”.
+                    <br> <br>
+                    Aunque ya tenía aplicado un formulario de contacto. Decidí dejarlo por dos razones, la primera es que es muy parecido al formulario de la página carrito, pero con la diferencia de que es más simple, y más fácil de leer y entender el código, una ventaja para la corrección.
+                    <br>
+                    Y la segunda, es que puse una foto de Messi haciendo el signo de la llamada con la manito, y me da pena sacarlo… porque es Messi
+    
+                </p>
+            </div>
+    
+            <div>
+                <h4><strong>Carrito</strong></h4>
+                <p>
+                    La última página en el proceso de compra.
+                    En primer lugar, recorre el Local Storage en busca de los productos agregados en la página “producto”.
+                    <br>
+                    Por cada producto obtenido, se hace un nuevo div en el DOM con la información de ese producto. También se pueden eliminar del carrito mediante el botón de la izquierda del todo respecto a cada producto.
+                    <br> <br>
+                    Además calcula el total, y se le puede aplicar un solo cupón, que descuenta el total. El envió está, pero como el pedido es ficticio, no tiene valor, y por lo tanto es cero.
+                    Cuando se aprieta en el botón disponible, se muestra un formulario, que está validado por tipo de caracteres. Y el botón de submit no se habilita hasta que los campos obligatorios estén validados.
+                    
+                </p>
+            </div>
+
+            <div class="gatito">
+                <img src="../assets/img/img_contacto/gato.gif" alt="gatito tipeando">
+            </div>
+        </div>
+
+        
+        
     </section>
 </main>
 
