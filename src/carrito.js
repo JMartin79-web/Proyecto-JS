@@ -60,8 +60,8 @@ precioMultiplicado.forEach( (p) => { totalCarrito += p} )
 function ejecutarTotal(){
     document.getElementById("total-num").innerText = totalCarrito + (envioCarrito) + (cuponCarrito)
 }
-////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 
 
 // ALGORITMO DE AGREGAR CUPÓN
@@ -119,27 +119,7 @@ cuponIngresado.addEventListener( "click", () => {
 })
 
 
-// ALGORITMO PARA FINALIZAR LA COMRPA
-
-// Ejecutamos el total
-ejecutarTotal()
-
-// Evento de finalizar compra
-btnFinalizarPulsado = document.getElementById("finalizar-compraBtn")
-btnFinalizarPulsado.addEventListener("click", () => {
-    btnPulsado = (elemento, textoNuevo) => {
-        elemento.setAttribute("id", "btn-clicked"); elemento.innerText = textoNuevo;
-        Toastify({
-            text: "Felicidades! Finalizaste tu compra",
-            gravity: "bottom",
-            position: "center",
-            duration: 2000,
-        }).showToast();
-        
-    } 
-    btnPulsado(document.getElementById("finalizar-compraBtn"),"COMPRA FINALIZADA!")
-})
-
+////////////////////////////////////////////////////////////////////////////////
 
 
 // ELIMINAR PRODUCTO
@@ -162,3 +142,121 @@ for (const btn of deleteBtn) {
 }
 
         
+////////////////////////////////////////////////////////////////////////////////
+
+// ALGORITMO FORMULARIO
+
+// Seleccionamos botones
+const btnFinalizarPulsado = document.getElementById("finalizar-compraBtn") // Fin carrito, que manda al formulario
+const btnFin = document.getElementById("fin") // Fin formulario
+
+// Seleccionamos main del form
+const mainForm = document.getElementById("main-form")
+
+// seleccionamos form
+const formulario = document.getElementById("compra")
+const inputs = document.querySelectorAll("#compra input")
+
+
+// ALGORITMO DE VALIDACIÓN DEL FORMULARIO
+
+// valida caracteres
+const caracteres = {
+    // Para validar lo ingresado por el usuario
+	nombre: /[a-zA-Z\s?]+[a-zA-Z]+/,
+	telefono: /^\d{5,20}$/,
+    mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    dni: /[0-9_.+-\s]+/,
+    calle:/[a-zA-Z0-9_.+-]+\s?[a-zA-Z0-9_.+-]/,
+    ciudad:/[a-zA-Z0-9_.+-]+\s?[a-zA-Z0-9_.+-]/,
+    cp:/[0-9_.+-\s]+/,
+    provincia:/[a-zA-Z0-9_.+-\s]+/,
+}
+const campos = {
+    nombre: false,
+    apellido: false,
+    telefono: false,
+    mail: false,
+    dni: false,
+    calle: false,
+    ciudad: false,
+    cp: false,
+    provincia: false
+}
+
+// Funcion para activar botón, una vez esté todo validado
+function activarBtn(){
+    if (campos.apellido && campos.calle && campos.ciudad && campos.cp && campos.dni && campos.mail && campos.nombre && campos.provincia && campos.telefono){btnFin.removeAttribute("disabled")}
+}
+
+// Funcion para validar el input
+// Caracter es la key de "caracteres" que vamos a usar para validar los caracteres inrgesados
+// input es el input donde estamos validando
+// campo es como se llama el input(cuál es)
+// tambien se ejecuta activarBtn, para que si lo ingresado valida el ultimo input necesario, se active el boton
+const validarCampo = (caracter, input, campo) => {
+    if (caracter.test(input.value))
+    {document.querySelector(`.${campo}-invalido`).innerText = "";campos[campo] = true;activarBtn()}
+    else{document.querySelector(`.${campo}-invalido`).innerText = `${campo} inválido`;campos[campo] = false;}
+}
+
+const validarInput = (validar) =>{
+    switch (validar.target.name) {
+        case "nombre": validarCampo(caracteres.nombre, validar.target, "nombre"); break;
+        case "apellido": validarCampo(caracteres.nombre, validar.target, "apellido"); break;
+        case "telefono": validarCampo(caracteres.telefono, validar.target, "telefono"); break;  
+        case "mail": validarCampo(caracteres.mail, validar.target, "mail"); break;
+        case "dni": validarCampo(caracteres.dni, validar.target, "dni"); break;
+        case "calle": validarCampo(caracteres.calle, validar.target, "calle"); break;            
+        case "ciudad": validarCampo(caracteres.ciudad, validar.target, "ciudad"); break;
+        case "cp": validarCampo(caracteres.cp, validar.target, "cp"); break;
+        case "provincia": validarCampo(caracteres.provincia, validar.target, "provincia"); break;            
+        default:break;
+    }
+    
+}
+// Cuando se escribe o se clickea afuera del input, se ejecuta validarInput
+inputs.forEach( (input) => {
+    input.addEventListener("keyup", validarInput)
+    input.addEventListener("blur", validarInput)
+})
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+// ALGORITMO PARA FINALIZAR LA COMRPA
+
+// Ejecutamos el total
+ejecutarTotal()
+
+// Funcion de cambiar texto y color cuando se apreta un boton
+btnPulsado = (elemento, textoNuevo) => {
+    elemento.setAttribute("id", "btn-clicked"); elemento.innerText = textoNuevo;
+}
+
+// Evento de finalizar compra. Para activar el formulario
+btnFinalizarPulsado.addEventListener("click", () => {
+    btnPulsado(document.getElementById("finalizar-compraBtn"),"LLENÁ EL FORMULARIO")
+    mainForm.classList.remove("filtro__sacar")
+    Toastify({
+        text: "Llená el formulario para terminar tu compra \n Estás a un paso!",
+        gravity: "bottom",
+        position: "center",
+        duration: 5000,
+    }).showToast();
+})
+
+// Finalizar compra con los datos del formulario varificados
+
+formulario.addEventListener("submit", (accion) => { 
+    accion.preventDefault() 
+    btnFin.addEventListener("click", () => {
+        btnPulsado(document.getElementById("fin"),"FINALIZASTE TU COMPRA!")})
+        Toastify({
+            text: "Felicidades! Finalizaste tu compra",
+            gravity: "bottom",
+            position: "center",
+            duration: 5000,
+        }).showToast();
+})

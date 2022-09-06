@@ -1,5 +1,5 @@
 //ESTILOS DE LA TABLA
-.carrito__titulo{margin: 5% 11% 2%;}
+.carrito__titulo, .carrito__formulario{margin: 5% 11% 2%;}
 .carrito{
     margin: 5% 10%;
     display: grid;
@@ -101,4 +101,39 @@
     background-color: transparent;
     &:hover{background-color: transparent;  @include crecer;}
     body .dark & {background-color: transparent;}
+}
+
+
+// FORMULARIO
+
+.formulario__sec{
+    h3{margin-top: 2%;}
+    input, select, textarea{body.dark &{background-color: $colorDark-negro-claro;}}
+    
+    label{
+        display: flex;
+        justify-content: space-between;
+        p{color: $color-rosa;body.dark & {color: $colorDark-rosa;};}
+    } 
+
+    display: flex;
+    justify-content: center;
+    div{
+        display: grid;
+        margin: 2% 0%;
+    }
+    
+    .form_facturacion, .form_envio{
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+        div{margin: 2% 0%;}
+        
+    }
+    .form_dni{
+        grid-template-columns: 20% 45%;
+        justify-content:flex-start;
+        align-items: center;
+        div{margin: 2% 2%;}
+    }
+    textarea{resize:none;}
 }

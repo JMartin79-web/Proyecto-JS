@@ -58,6 +58,8 @@ $colorDark-negro: #1e1b18; // negro
     body.dark &{ background-color: $colorDark-negro-claro;}
 }
 
+// BOTONES
+
 @mixin hover-btn {
     &:hover{background-color: $color-rosa;}
 }
@@ -73,7 +75,16 @@ $colorDark-negro: #1e1b18; // negro
 @mixin hoverDark-a {
     &:hover{color: $colorDark-rosa;}
 }
-
+// boton deshabilitado
+@mixin hover-deshabilitado{
+    cursor: not-allowed;
+    background-color: $color-g-oscuro;
+    body.dark & { background-color: $colorDark-g-oscuro;}
+    &:hover{
+        background-color: $color-g-oscuro;
+        body.dark & { background-color: $colorDark-g-oscuro;}
+    }
+}
 
 
 // SLIDER

@@ -49,6 +49,9 @@ button{
         color: $colorDark-b;
         background-color: $colorDark-azul-oscuro;
     }
+    &:disabled{
+        @include hover-deshabilitado;
+    }
 }
 
 #btn-clicked{
@@ -61,3 +64,5 @@ button{
         background-color: $colorDark-rosa;
     }
 }
+
+

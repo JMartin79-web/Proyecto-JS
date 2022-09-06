@@ -59,44 +59,91 @@
 <main class="main__nosotros">
     <section class="main__nosotros_presentacion"> 
         <h1><strong>QUIENES SOMOS</strong></h1>
+        <p>Te habla el creador de este sitio web, espero que disfrutes de navegar por estas páginas
+            <br> Este sitio es un simulador de e-commerce. <br>
+            <strong>NO EXISTIMOS!</strong>
+        </p>
+    </section>
+</main>
+
+<main class="main__info">
+    <h3><strong>Pero lo que si puedo hacer, es explicar como funciona el sitio</strong></h3>
+
+    <section class="info_sec1">
+        <h3>Páginas</h3>
+            <ul>El sitio está compuesto por: 
+                <li>Home</li>
+                <li>Shop</li>
+                <li>Producto</li>
+                <li>Nosotros</li>
+                <li>Carrito</li>
+            </ul>
+        <p>Todas las páginas tienen agregadas funcionalidades con javascript.</p>
+    </section>
+    <section class="info_sec2">
+
+        <div>
+            <h4><strong>Home</strong></h4>
+            <p>La home tiene un CountDown hecho mediante la clase Date. <br>
+            Toma por un lado la fecha de hoy, y por otro lado la fecha de hoy, y le suma los milisegundos equivalentes a entre tres y cinco días. Los milisegundos que suma se generan de forma aleatoria y se guardan en el Local Storage. ¿Por qué? Porque así, mientras navegas por el resto del sitio, o salis del navegador y volves a entrar, esa suma random de entre 3 a 5 días no se reinicia. De otra forma, el numero se generaría con cada refresco de la página, y sería inconsistente para el usuario.
+            </p>
+        </div>
+        
+        <div>
+            <h4><strong>Shop</strong></h4>
+            <p>El shop consume un archivo <strong>.json</strong> mediante fetch.
+            </p>
+        </div>
 
     </section>
 </main>
 
+
 <main class="main__contacto">
 
     <section class="main__contacto__sec1">
-        <form action="">
-            <div>
-                <h1>Contactanos</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab provident quasi autem expedita aspernatur temporibus harum iste, cupiditate assumenda consequuntur ad commodi ipsam asperiores ex, quod reprehenderit quia, sit quos!</p>
-            </div>
+        <form action="#" id="form-contacto">
+            <h2>Contactanos</h2>
+                <p>Si querés contactar con esta marca ficticia, ¡No podés!
+                <br>
+                Pero igual te dejamos un formulario
+                </p>
             
-            <div>
-                <input type="text" id="name" name="user_name" class="form__name"  placeholder="Nombre" required>
-    
-                <input type="text" id="apellido" name="user_apellido" class="form__apellido"  placeholder="Apellido" required>
+            <div class="contacto__sec1_div1">
+                <div>
+                    <label for="nombre">Nombre <p class="nombre-invalido"></p></label>
+                    <input type="text" id="name" name="nombre" class="nombre"  placeholder="Nombre" required>
+                </div>
+                
+                <div>
+                    <label for="apellido">Apellido<p class="apellido-invalido"></p></label>
+                    <input type="text" id="apellido" name="apellido" class="apellido"  placeholder="Apellido" required>
+                </div>
+                
             </div>
 
-            <div>
-                <input type="email" id="mail" name="user_mail" class="form__email" placeholder="Tu e-mail" required>
-        
-                <input type="text" id="telefono" name="user_telefono" class="form__telefono" placeholder="Número de teléfono">
+            <div class="contacto__sec1_div2">
+                <div>
+                    <label for="email">email<p class="mail-invalido"></p></label>
+                    <input type="email" id="mail" name="mail" class="email" placeholder="Tu e-mail" required>
+                </div>
+
+                <div>
+                    <label for="telefono">Telefono<p class="telefono-invalido"></p></label>
+                    <input type="text" id="telefono" name="telefono" class="telefono" placeholder="Número de teléfono">
+                </div>
+                
             </div>
             
-            <div>
-                <textarea id="msg" name="user_msg" class="form__msg" placeholder="Dejanos un mensaje"></textarea>
-            </div>
-
-            <div>
-                <button type="submit" class="form__enviar" id="enviar_contacto">CONTACTAR</button>
-            </div>
+                <textarea id="msg" name="msg" class="msg" placeholder="Dejanos un mensaje"></textarea>
+            
+                <button type="submit" class="form__enviar" id="enviar_contacto" disabled>CONTACTAR</button>
+            
         </form>
         
     </section>
 
-    <section class="main__contacto__sec2">
-    </section>
+    <section class="main__contacto__sec2"> <!-- IMAGEN --> </section>
 
 </main>
 
@@ -141,5 +188,6 @@
 
 <!-- SCRIPTS -->
 <script src="../src/darkmode.js"></script>
+<script src="../src/nosotros.js" type="module"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </html>

@@ -51,6 +51,15 @@ button, .main__img .main__img__section .contador .contador_div a, .main__product
     background-color: #21385e; }
     body.dark button:hover, body.dark .main__img .main__img__section .contador .contador_div a:hover, .main__img .main__img__section .contador .contador_div body.dark a:hover, body.dark .main__product .info__product .btn__producto:hover, .main__product .info__product body.dark .btn__producto:hover {
       background-color: #d64c73; }
+  button:disabled, .main__img .main__img__section .contador .contador_div a:disabled, .main__product .info__product .btn__producto:disabled {
+    cursor: not-allowed;
+    background-color: #4c4b49; }
+    body.dark button:disabled, body.dark .main__img .main__img__section .contador .contador_div a:disabled, .main__img .main__img__section .contador .contador_div body.dark a:disabled, body.dark .main__product .info__product .btn__producto:disabled, .main__product .info__product body.dark .btn__producto:disabled {
+      background-color: #4c4b49; }
+    button:disabled:hover, .main__img .main__img__section .contador .contador_div a:disabled:hover, .main__product .info__product .btn__producto:disabled:hover {
+      background-color: #4c4b49; }
+      body.dark button:disabled:hover, body.dark .main__img .main__img__section .contador .contador_div a:disabled:hover, .main__img .main__img__section .contador .contador_div body.dark a:disabled:hover, body.dark .main__product .info__product .btn__producto:disabled:hover, .main__product .info__product body.dark .btn__producto:disabled:hover {
+        background-color: #4c4b49; }
 
 #btn-clicked {
   cursor: url(../../assets/img/iconos/ball.svg), auto;
@@ -272,7 +281,7 @@ footer {
           scale: 1.2;
           transition: all ease 1s; }
 
-.carrito__titulo {
+.carrito__titulo, .carrito__formulario {
   margin: 5% 11% 2%; }
 
 .carrito {
@@ -416,6 +425,37 @@ footer {
   body .dark .btn-carrito-delete {
     background-color: transparent; }
 
+.formulario__sec {
+  display: flex;
+  justify-content: center; }
+  .formulario__sec h3 {
+    margin-top: 2%; }
+  body.dark .formulario__sec input, body.dark .formulario__sec select, body.dark .formulario__sec textarea {
+    background-color: #201e1b; }
+  .formulario__sec label {
+    display: flex;
+    justify-content: space-between; }
+    .formulario__sec label p {
+      color: #d8315b; }
+      body.dark .formulario__sec label p {
+        color: #d64c73; }
+  .formulario__sec div {
+    display: grid;
+    margin: 2% 0%; }
+  .formulario__sec .form_facturacion, .formulario__sec .form_envio {
+    grid-template-columns: 45% 45%;
+    justify-content: space-between; }
+    .formulario__sec .form_facturacion div, .formulario__sec .form_envio div {
+      margin: 2% 0%; }
+  .formulario__sec .form_dni {
+    grid-template-columns: 20% 45%;
+    justify-content: flex-start;
+    align-items: center; }
+    .formulario__sec .form_dni div {
+      margin: 2% 2%; }
+  .formulario__sec textarea {
+    resize: none; }
+
 .main__nosotros {
   background-color: #FFFFFF;
   padding: 3%;
@@ -424,20 +464,70 @@ footer {
     background-color: #201e1b; }
   .main__nosotros .main__nosotros_presentacion {
     text-align: center; }
+    .main__nosotros .main__nosotros_presentacion h1 {
+      margin: 2% 0%; }
+
+.main__info {
+  margin: 5% 10%;
+  display: flex;
+  flex-direction: column; }
+  .main__info h3 {
+    font-size: 1.5rem;
+    margin: 2% 0; }
+  .main__info .info_sec1 ul {
+    margin: 2% 0; }
+  .main__info .info_sec1 li {
+    list-style-type: none;
+    padding-left: 10px;
+    font-size: 0.8rem; }
+  .main__info .info_sec2 {
+    margin: 2% 5%; }
+    .main__info .info_sec2 h4 strong {
+      font-size: 1.5rem; }
+    .main__info .info_sec2 div {
+      margin-top: 2%; }
 
 .main__contacto {
-  width: 100%;
+  margin: 5% 10%;
   display: flex; }
   .main__contacto section {
     width: 50%; }
   .main__contacto .main__contacto__sec2 {
     background-image: url(../../assets/img/img_contacto/messi_llamando.jpg);
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    padding: 5% 2%; }
   .main__contacto .main__contacto__sec1 {
     padding: 5% 2%; }
-    body.dark .main__contacto .main__contacto__sec1 div input, body.dark .main__contacto .main__contacto__sec1 div textarea {
-      background-color: #201e1b; }
+    .main__contacto .main__contacto__sec1 div {
+      margin: 2% 0%;
+      display: grid;
+      grid-template-columns: 45% 45%;
+      justify-content: space-between;
+      align-items: stretch; }
+      body.dark .main__contacto .main__contacto__sec1 div input, body.dark .main__contacto .main__contacto__sec1 div textarea {
+        background-color: #201e1b; }
+      .main__contacto .main__contacto__sec1 div div {
+        display: flex;
+        flex-direction: column; }
+      .main__contacto .main__contacto__sec1 div label {
+        display: flex;
+        justify-content: space-between; }
+        .main__contacto .main__contacto__sec1 div label p {
+          color: #d8315b; }
+          body.dark .main__contacto .main__contacto__sec1 div label p {
+            color: #d64c73; }
+    .main__contacto .main__contacto__sec1 button, .main__contacto .main__contacto__sec1 .main__img .main__img__section .contador .contador_div a, .main__img .main__img__section .contador .contador_div .main__contacto .main__contacto__sec1 a, .main__contacto .main__contacto__sec1 .main__product .info__product .btn__producto, .main__product .info__product .main__contacto .main__contacto__sec1 .btn__producto {
+      margin: 5% 0%; }
+    .main__contacto .main__contacto__sec1 input, .main__contacto .main__contacto__sec1 textarea {
+      border: none;
+      padding: 5px; }
+    .main__contacto .main__contacto__sec1 textarea {
+      resize: none;
+      width: 100%;
+      height: 150px; }
+      body.dark .main__contacto .main__contacto__sec1 textarea {
+        background-color: #201e1b; }
 
 .shop {
   width: 100%;
