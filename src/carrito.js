@@ -189,7 +189,7 @@ function activarBtn(){
 }
 
 // Funcion para validar el input
-// Caracter es la key de "caracteres" que vamos a usar para validar los caracteres inrgesados
+// Caracter es la key de "caracteres" que vamos a usar para validar los caracteres ingresados
 // input es el input donde estamos validando
 // campo es como se llama el input(cuál es)
 // tambien se ejecuta activarBtn, para que si lo ingresado valida el ultimo input necesario, se active el boton

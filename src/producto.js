@@ -34,7 +34,9 @@ arrayProducto.forEach(elemento => {
 // Colocamos el fragmento con la información en el DOM
 mainProduct.appendChild(fragmentoProducto)
 
+
 //////////////////////////////////////////////////////////////////////////////////
+
 
 // Seleccionamos el botón
 const btnAgregar = document.getElementById("btn__agregar")
@@ -89,8 +91,3 @@ btnAgregar.addEventListener("click", () => {
         duration: 2000,
     }).showToast();
 })
-
-
-// Seccion ver relacionados
-
-const relacionados = document.getElementById("relacionados__cards")

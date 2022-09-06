@@ -35,10 +35,7 @@ function activarBtn(){
 
 
 // Funcion para validar el input
-// Caracter es la key de "caracteres" que vamos a usar para validar los caracteres inrgesados
-// input es el input donde estamos validando
-// campo es como se llama el input(cuál es)
-// tambien se ejecuta activarBtn, para que si lo ingresado valida el ultimo input necesario, se active el boton
+
 const validarCampo = (caracter, input, campo) => {
     if (caracter.test(input)){
         document.querySelector(`.${campo}-invalido`).innerText = "";
@@ -68,7 +65,7 @@ inputsContacto.forEach( (input) => {
 })
 
 
-// Boton
+// BOTÓN
 const btnPulsado = (elemento, textoNuevo) => {
     elemento.setAttribute("id", "btn-clicked"); elemento.innerText = textoNuevo;
 }
